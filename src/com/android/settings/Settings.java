@@ -107,7 +107,11 @@ public class Settings extends SettingsActivity {
     public static class LockScreenSettingsActivity extends SettingsActivity { /* empty */ }
     public static class LiveDisplayActivity extends SettingsActivity { /* empty */ }
     public static class DisplayRotationActivity extends SettingsActivity { /* empty */ }
+<<<<<<< HEAD
     public static class NotificationManagerActivity extends SettingsActivity { /* empty */ }
     public static class HeadsUpSettings extends SettingsActivity { /* empty */ }
+=======
+    public static class AnonymousStatsActivity extends Settings { /* empty */ }
+>>>>>>> acc6dea... Settings: Anonymous Statistics (CMStats)
 }
 

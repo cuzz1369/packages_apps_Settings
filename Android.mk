@@ -7,8 +7,8 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 	android-support-v7-cardview \
 	android-support-v13 \
 	jsr305 \
-	libGoogleAnalyticsV3 \
-	org.cyanogenmod.platform.sdk
+	org.cyanogenmod.platform.sdk \
+    libGoogleAnalyticsV2
 
 LOCAL_MODULE_TAGS := optional
 
