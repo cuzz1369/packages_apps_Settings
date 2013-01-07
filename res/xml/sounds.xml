@@ -95,6 +95,13 @@
                 android:icon="@drawable/ring_notif_increasing"
                 android:dependency="increasing_ring"
                 settings:advanced="true"/>
+ 
+        <!-- Headset -->
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+                android:key="headset_connect_player"
+                android:title="@string/headset_connect_player_title"
+                android:summary="@string/headset_connect_player_summary"
+                android:defaultValue="false" />
 
         <!-- Advanced options -->
         <Preference
