@@ -52,4 +52,15 @@
         android:summary="@string/show_enter_key_summary"
         android:persistent="false" />
 
+<<<<<<< HEAD
+=======
+    <ListPreference
+        android:key="volume_key_cursor_control"
+        android:persistent="false"
+        android:dialogTitle="@string/volume_key_cursor_control_title"
+        android:title="@string/volume_key_cursor_control_title"
+        android:entries="@array/volume_key_cursor_control_entries"
+        android:entryValues="@array/volume_key_cursor_control_values" />
+
+>>>>>>> f9d56f4... settings: add back all keyboard IME features back (2/2)
 </PreferenceScreen>
