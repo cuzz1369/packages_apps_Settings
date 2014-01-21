@@ -65,18 +65,20 @@
         android:title="@string/gesture_anywhere_title"
         android:summary="@string/summary_gesture_anywhere"/>
     
-	<!-- Heads up -->
+    <!-- Heads up -->
     <PreferenceScreen
         android:key="heads_up_enabled"
         android:title="@string/title_heads_up"
         android:summary="@string/summary_heads_up"
         android:fragment="com.android.settings.candy.HeadsUpSettings" />
- 
-    <!-- Navigation bar -->
-      <PreferenceScreen
-           android:key="navigation_bar"
-           android:fragment="com.android.settings.vanir.NavbarInterface"
-           android:title="@string/category_navbar" />
+
+    <!-- Navigation -->
+    <PreferenceScreen
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_interface"
+        android:fragment="com.android.settings.slim.NavigationSettings"
+        android:title="@string/navigation_settings_title"
+        settings:advanced="true" />
            
     <!-- Notification drawer -->
     <PreferenceScreen
