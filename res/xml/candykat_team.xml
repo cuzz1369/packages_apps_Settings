@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2013 SlimRoms Project
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:title="@string/candykat_team_title">
+<Preference
+android:key="candy_matthew0776"
+android:title="@string/candy_matthew0776_title" />
+<Preference
+android:key="candy_mar5hal"
+android:title="@string/candy_mar5hal_title" />
+<Preference
+android:key="candy_CyberScopes"
+android:title="@string/candy_CyberScopes_title" />
+<Preference
+android:key="candy_gimmeitorilltell"
+android:title="@string/candy_gimmeitorilltell_title" />
+<Preference
+android:key="candy_BMP7777"
+android:title="@string/candy_BMP7777_title" />
+<Preference
+android:key="candy_tr1gg3r84"
+android:title="@string/candy_tr1gg3r84_title" />
+<Preference
+android:key="candy_rc420head"
+android:title="@string/candy_rc420head_title" />
+<Preference
+android:key="candy_flashalot"
+android:title="@string/candy_flashalot_title" />
+<Preference
+android:key="candy_venomtester"
+android:title="@string/candy_venomtester_title" />
+<Preference
+android:key="candy_cuzz1369"
+android:title="@string/candy_cuzz1369_title" />
+<Preference
+android:key="candy_cannondaleV2000"
+android:title="@string/candy_cannondaleV2000_title" />
+<Preference
+android:key="candy_darknites"
+android:title="@string/candy_darknites_title" />
+<Preference
+android:key="candy_rapier"
+android:title="@string/candy_rapier_title" />
+</PreferenceScreen>
