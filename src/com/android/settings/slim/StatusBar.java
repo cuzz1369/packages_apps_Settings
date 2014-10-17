@@ -40,11 +40,13 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String TAG = "StatusBarSettings";
 
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
+    private static final String KEY_STATUS_BAR_TICKER = "status_bar_ticker";
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String STATUS_BAR_NOTIFICATION_COUNT = "status_bar_notification_count";
 
 
     private PreferenceScreen mClockStyle;
+    private CheckBoxPreference mTicker;
     private CheckBoxPreference mStatusBarBrightnessControl;
     private CheckBoxPreference mStatusBarNotifCount;
 
@@ -66,6 +68,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             updateClockStyleDescription();
         }
 
+        mTicker = (CheckBoxPreference) prefSet.findPreference(KEY_STATUS_BAR_TICKER);
+        mTicker.setChecked(Settings.System.getInt(
+                getContentResolver(), Settings.System.TICKER_ENABLED, 1) == 1);
+        mTicker.setOnPreferenceChangeListener(this);
+
         mStatusBarBrightnessControl =
             (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_BRIGHTNESS_CONTROL);
         mStatusBarBrightnessControl.setChecked((Settings.System.getInt(getContentResolver(),
@@ -79,7 +86,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mStatusBarBrightnessControl) {
+        if (preference == mTicker) {
+            Settings.System.putInt(getContentResolver(), Settings.System.TICKER_ENABLED,
+                    (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mStatusBarBrightnessControl) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
                     (Boolean) newValue ? 1 : 0);
