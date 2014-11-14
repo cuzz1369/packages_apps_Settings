@@ -18,6 +18,12 @@
              xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
              android:title="@string/candy_settings_title" >
+   
+   <!-- AdBlocker -->
+    <PreferenceScreen
+        android:key="hfm_settings"
+        android:title="@string/hfm_pref_screen_title"
+        android:fragment="com.android.settings.candy.hfm.HfmSettings" /> 
 
    <!-- Animations -->               
     <PreferenceScreen
