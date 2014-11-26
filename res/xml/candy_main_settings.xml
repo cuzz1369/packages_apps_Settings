@@ -46,7 +46,16 @@
          android:title="@string/notification_manager"
          android:fragment="com.android.settings.notification.NotificationManagerSettings">
     </PreferenceScreen>          
+    
+    <!-- Recents Panel -->
 
+        <PreferenceScreen
+        android:key="recents_panel"
+        android:fragment="com.android.settings.candy.RecentsSettings"
+        android:title="@string/Recents_panel" >
+
+       </PreferenceScreen>
+       
      <!-- Status Bar -->  
      <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -55,5 +64,7 @@
         android:title="@string/status_bar_title" 
         settings:advanced="true">
      </PreferenceScreen>
-   
+
+       
+
 </PreferenceScreen>

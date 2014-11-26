@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+<<<<<<< HEAD
      Copyright (C) 2012-2015 The CyanogenMod Project
 
+=======
+
+     Copyright (C) 2014 Candy5 Android
+>>>>>>> 496acda... [Settings]: recents panel clear all button tweaks
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -38,5 +43,14 @@
     <string name="interface_title">Interface</string>
     <string name="controls_title">Controls</string>
     <string name="userpsace_title">Userspace</string>
+    <string name="Recents_panel">Recents panel</string>
+
+    <!-- Recents panel settings -->
+    <string name="show_clear_all_recents_button_title">Clear all recents button</string>
+    <string name="show_clear_all_recents_button_summary">Show clear all button on recents panel</string>
+    <string name="recents_clear_all_location_title">Clear all recents location</string>
+    <string name="recents_clear_all_location_right">Top right</string>
+    <string name="recents_clear_all_location_left">Top left</string>
+
 
 </resources>
