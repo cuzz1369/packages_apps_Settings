@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-<<<<<<< HEAD
-     Copyright (C) 2012-2015 The CyanogenMod Project
-
-=======
-
      Copyright (C) 2014 Candy5 Android
->>>>>>> 496acda... [Settings]: recents panel clear all button tweaks
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
           http://www.apache.org/licenses/LICENSE-2.0
-
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,7 +13,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   
- <!-- Candy5 General Settings Strings -->
+    <!-- Candy5 General Settings Strings -->
     <string name="attention">Attention</string>
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
@@ -34,8 +26,7 @@
     <string name="display_category_candy5_options_title">Candy5 Interface</string>
     <string name="category_general_title">General Options</string>
     <string name="candy_settings_title">Candy interface</string>
-
- <string name="header_category_personalization">Personalization</string>
+    <string name="header_category_personalization">Personalization</string>
 
     <!-- Candy interface -->
     <string name="Candy_title">Candy interface</string>
@@ -72,10 +63,10 @@
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>    
 
-   <!-- disable recents search bar -->
+    <!-- disable recents search bar -->
     <string name="recents_searchbar_title">Search bar</string>
 
-   <!-- Color Picker -->
+    <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
     <string name="arrow_right">→</string>
@@ -89,8 +80,8 @@
     <string name="omniswitch_settings_title">OmniSwitch Settings</string>
     <string name="omniswitch_settings_summary">Enable and configure OmniSwitch recents</string>
 
-	<!-- CandyRoms team -->
-	<string name="candykat_team_title">CandyRoms team</string>
+    <!-- CandyRoms team -->
+    <string name="candykat_team_title">CandyRoms team</string>
     <string name="candy_matthew0776_title">matthew0776</string>
     <string name="candy_mar5hal_title">mar5hal</string>
     <string name="candy_CyberScopes_title">CyberScopes</string>
@@ -123,7 +114,6 @@
     <string name="animation_duration_title">Animation duration</string>
     <string name="animation_duration_default">Default</string>
 
-
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Listview options</string>
     <string name="listview_animation_title">ListView animations</string>
@@ -149,7 +139,7 @@
     <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
     <string name="listview_bounce_interpolator">Bounce</string>
     
-      <!-- Network traffic -->
+    <!-- Network traffic -->
     <string name="network_traffic_title">Network traffic</string>
     <string name="show_network_traffic_state">Status bar traffic monitor</string>
     <string name="network_traffic_summary">Enable various network traffic options in statusbar</string>
@@ -171,5 +161,8 @@
     <string name="network_traffic_color_style">Color style</string>
     <string name="network_traffic_color_reset">Reset color</string>
     <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
+
+    <!-- Lockscreen carrier label -->
+    <string name="lockscreen_show_carrier_title">Lock screen carrier label</string>
 
 </resources>
