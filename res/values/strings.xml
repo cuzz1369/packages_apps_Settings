@@ -5984,7 +5984,8 @@
     <string name="status_bar_clock_summary">Change various clock &amp; date options</string>
 
     <!-- Partition Info -->
-    <string name="partition_info_title">Partition info</string>
+    <string name="partition_info_title">View partition information</string>
+    <string name="partition_info_summary">Shows you the partition information for the device</string>
     <string name="partition_info_system">/system</string>
     <string name="partition_info_data">/data</string>
     <string name="partition_info_cache">/cache</string>
