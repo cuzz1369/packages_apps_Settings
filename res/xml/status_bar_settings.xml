@@ -18,6 +18,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/status_bar_title">
     
+    <PreferenceScreen
+	    android:key="network_traffic_state"
+	    android:fragment="com.android.settings.candy.NetworkTraffic"
+ 	    android:summary="@string/network_traffic_summary"
+	    android:title="@string/network_traffic_title" />
+    
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="show_su_icon"
         android:title="@string/su_indicator"
