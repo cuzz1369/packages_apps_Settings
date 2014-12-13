@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.slim.dslv;
+package com.android.settings.candy.dslv;
 
 import android.graphics.Point;
 import android.view.GestureDetector;
