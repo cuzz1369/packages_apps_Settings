@@ -52,6 +52,12 @@
          android:fragment="com.android.settings.ButtonSettings">
       </PreferenceScreen>
 
+    <!-- Gesture anywhere -->
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:fragment="com.android.settings.candy.gestureanywhere.GestureAnywhereSettings"
+        android:title="@string/gesture_anywhere_title" />
+    
     <!-- Lock screen -->
       <PreferenceScreen
          android:id="@+id/lockscreen_settings"
