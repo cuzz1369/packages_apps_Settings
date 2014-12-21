@@ -30,9 +30,16 @@
          android:key="animations"
          android:fragment="com.android.settings.candy.AnimationsSettings"
          android:title="@string/animations_settings">
-    </PreferenceScreen>    
+    </PreferenceScreen> 
+   
+   <!-- App Circle Bar -->
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:fragment="com.android.settings.candy.AppCircleBar"
+        android:title="@string/app_circle_bar_title"
+        android:icon="@drawable/ic_settings_sidebar"/>
 
-	<!-- Battery bar -->
+   <!-- Battery bar -->
     <PreferenceScreen
          android:key="battery_bar"
          android:fragment="com.android.settings.candy.BatteryBar"
