@@ -351,6 +351,7 @@
         <item>@string/heads_up_time_out_10sec</item>
     </string-array>
 
+
     <string-array name="heads_up_time_out_values" translatable="false">
         <item>0</item>
         <item>2000</item>
@@ -362,6 +363,40 @@
         <item>8000</item>
         <item>9000</item>
         <item>10000</item>
+    </string-array>
+
+   <string-array name="lockscreen_shortcuts_launch_type_entries" translatable="false">
+        <item>@string/lockscreen_shortcuts_single_tap</item>
+        <item>@string/lockscreen_shortcuts_double_tap</item>
+        <item>@string/lockscreen_shortcuts_longpress</item>
+    </string-array>
+
+    <string-array name="lockscreen_shortcuts_launch_type_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Gesture Anywhere -->
+    <string-array name="gesture_anywhere_position_entries" translatable="false">
+        <item>@string/gesture_anywhere_position_left</item>
+        <item>@string/gesture_anywhere_position_right</item>
+    </string-array>
+
+    <string-array name="gesture_anywhere_position_values" translatable="false">
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- Gesture Anywhere -->
+    <string-array name="gesture_anywhere_position_entries" translatable="false">
+        <item>@string/gesture_anywhere_position_left</item>
+        <item>@string/gesture_anywhere_position_right</item>
+    </string-array>
+
+    <string-array name="gesture_anywhere_position_values" translatable="false">
+        <item>3</item>
+        <item>5</item>
     </string-array>
 
    <!-- Battery Bar -->
@@ -387,7 +422,6 @@
     <string-array name="battery_bar_style_values" translatable="false">
         <item>0</item>
         <item>1</item>
-
     </string-array>
 
     <string-array name="battery_bar_thickness_entries">

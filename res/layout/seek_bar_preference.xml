@@ -59,5 +59,3 @@
                     android:layout_toLeftOf="@id/seekBarPrefUnitsLeft" />
     </RelativeLayout>
 </RelativeLayout>
-
-

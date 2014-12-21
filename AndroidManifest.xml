@@ -2356,6 +2356,11 @@
                        android:resource="@id/lockscreen_settings" />
         </activity>
 
+
+        <activity android:name=".candy.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".candy.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"

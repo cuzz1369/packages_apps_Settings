@@ -25,4 +25,13 @@
 
     <dimen name="phone_width">320dp</dimen>
     <dimen name="phone_height">420dp</dimen>
+
+    <!-- Gesture Anywhere -->
+    <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
+    <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
+    <dimen name="shortcut_picker_left_padding">70dip</dimen>
+
+    <!-- App Circle -->
+    <dimen name="drag_grip_ridge_size">4dp</dimen>
+    <dimen name="drag_grip_ridge_gap">2dp</dimen>
 </resources>

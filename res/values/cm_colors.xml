@@ -54,6 +54,7 @@
     <!-- Installed app details -->
     <color name="security_settings_billing_desc_color">#ffffb060</color>
     <color name="qs_tile_default_background_color">@android:color/transparent</color>
+
     <!-- Switch Bar Text Color -->
     <color name="switchbar_text_color">#ffffffff</color>
 
@@ -79,4 +80,9 @@
     <color name="fingerprint_progress_success_color">#00b315</color>
     <color name="fingerprint_progress_error_color">#f44336</color>
     <color name="fingerprint_enrollment_color_control_activated">#085ea3</color>
+
+
+    <!-- Gesture Anywhere -->
+    <color name="ga_gesture_color">@android:color/holo_blue_light</color>
+
 </resources>

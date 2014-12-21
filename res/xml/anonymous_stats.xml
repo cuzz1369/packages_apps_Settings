@@ -28,5 +28,4 @@
     <PreferenceScreen
         android:title="@string/preview_data_title"
         android:fragment="com.android.settings.cmstats.PreviewData" />
-
 </PreferenceScreen>
