@@ -18,7 +18,15 @@
              xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
              android:title="@string/candy_settings_title" >
-    <!-- Buttons -->                  
+
+   <!-- Animations -->               
+    <PreferenceScreen
+        android:key="aokp_animation"
+        android:title="@string/aokp_animation_title"
+        android:summary="@string/aokp_animation_summary"
+        android:fragment="com.android.settings.candy.AnimationControls" />
+
+    <!-- Buttons -->  
       <PreferenceScreen
          android:id="@+id/button_settings"
          android:title="@string/button_pref_title"
