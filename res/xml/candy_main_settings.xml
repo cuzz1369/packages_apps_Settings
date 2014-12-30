@@ -21,10 +21,10 @@
 
    <!-- Animations -->               
     <PreferenceScreen
-        android:key="aokp_animation"
-        android:title="@string/aokp_animation_title"
-        android:summary="@string/aokp_animation_summary"
-        android:fragment="com.android.settings.candy.AnimationControls" />
+         android:key="animations"
+         android:fragment="com.android.settings.candy.AnimationsSettings"
+         android:title="@string/animations_settings">
+    </PreferenceScreen>    
 
     <!-- Buttons -->  
       <PreferenceScreen
@@ -61,7 +61,6 @@
         android:key="recents_panel"
         android:fragment="com.android.settings.candy.RecentsSettings"
         android:title="@string/Recents_panel" >
-
        </PreferenceScreen>
        
      <!-- Status Bar -->  
