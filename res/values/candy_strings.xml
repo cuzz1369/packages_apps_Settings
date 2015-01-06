@@ -45,6 +45,10 @@
     <string name="userpsace_title">Userspace</string>
     <string name="Recents_panel">Recents panel</string>
 
+    <!-- Superuser indicator-->
+    <string name="su_indicator">Superuser indicator</string>
+    <string name="su_indicator_summary">Show superuser indicator when a session is active</string>
+
     <!-- Recents panel settings -->
     <string name="show_clear_all_recents_button_title">Clear all recents button</string>
     <string name="show_clear_all_recents_button_summary">Show clear all button on recents panel</string>
