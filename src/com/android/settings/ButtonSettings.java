@@ -317,37 +317,13 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else {
             prefScreen.removePreference(volumeCategory);
         }
-   try {
-       // Only show the navigation bar category on devices that have a navigation bar
-      // unless we are forcing it via development settings
-      boolean forceNavbar = android.provider.Settings.System.getInt(getContentResolver(),
-             android.provider.Settings.System.DEV_FORCE_SHOW_NAVBAR, 0) == 1;
-      boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar()
-             || forceNavbar;
-
-      if (!Utils.isPhone(getActivity())) {
-            mNavigationPreferencesCat.removePreference(mNavigationBarLeftPref);
-         }
-
-      if (!hasNavBar && (needsNavigationBar || !isKeyDisablerSupported())) {
-     // Hide navigation bar category
-        prefScreen.removePreference(mNavigationPreferencesCat);
-        }
-
-      } catch (RemoteException e) {
-        Log.e(TAG, "Error getting navigation bar status");
-      }
 
         final ButtonBacklightBrightness backlight =
                 (ButtonBacklightBrightness) findPreference(KEY_BUTTON_BACKLIGHT);
         if (!backlight.isButtonSupported() && !backlight.isKeyboardSupported()) {
             prefScreen.removePreference(backlight);
         }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
+    
 
         // Power button ends calls.
         if (mPowerEndCall != null) {
