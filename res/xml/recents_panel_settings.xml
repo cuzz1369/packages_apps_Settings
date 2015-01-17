@@ -17,6 +17,11 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/Recents_panel">
+    
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="recents_search_bar"
+            android:title="@string/recents_searchbar_title"
+            android:defaultValue="true" />
 
      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="show_clear_all_recents"
