@@ -96,7 +96,7 @@
                 android:dependency="increasing_ring"
                 settings:advanced="true"/>
 
-        <!-- Other sounds -->
+        <!-- Advanced options -->
         <Preference
                 android:key="other_sounds"
                 android:title="@string/other_sound_settings"
