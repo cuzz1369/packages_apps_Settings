@@ -230,5 +230,3 @@ public class SeekBarPreference extends Preference implements OnSeekBarChangeList
         mCurrentValue = value;
     }
 }
-
-
