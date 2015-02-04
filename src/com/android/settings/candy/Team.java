@@ -1,4 +1,4 @@
-package com.android.settings.candykat;
+package com.android.settings.candy;
 import android.content.ContentResolver;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -30,7 +30,7 @@ public void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
 ContentResolver resolver = getActivity().getContentResolver();
 // Load the preferences from an XML resource
-addPreferencesFromResource(R.xml.candykat_team);
+addPreferencesFromResource(R.xml.candyteam);
 PreferenceScreen prefSet = getPreferenceScreen();
 mMatthew0776 = prefSet.findPreference("candy_matthew0776");
 mMar5hal = prefSet.findPreference("candy_mar5hal");
