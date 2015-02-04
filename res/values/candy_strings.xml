@@ -68,6 +68,7 @@
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>    
 
+<<<<<<< HEAD
    <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
@@ -77,5 +78,26 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
     <string name="color_default">Default</string>
+=======
+    <!-- OmniSwitch -->
+    <string name="omniswitch_settings_title">OmniSwitch Settings</string>
+    <string name="omniswitch_settings_summary">Enable and configure OmniSwitch recents</string>
+
+	<!-- CandyRoms team -->
+	<string name="candykat_team_title">CandyRoms team</string>
+    <string name="candy_matthew0776_title">matthew0776</string>
+    <string name="candy_mar5hal_title">mar5hal</string>
+    <string name="candy_CyberScopes_title">CyberScopes</string>
+    <string name="candy_gimmeitorilltell_title">gimmeitorilltell</string>
+    <string name="candy_BMP7777_title">BMP7777</string>
+    <string name="candy_tr1gg3r84_title">tr1gg3r84</string>
+    <string name="candy_rc420head_title">rc420head</string>
+    <string name="candy_flashalot_title">flashalot aka Brickalot</string>
+    <string name="candy_venomtester_title">Venomtester</string>
+    <string name="candy_cuzz1369_title">cuzz1369</string>
+    <string name="candy_cannondaleV2000_title">cannondaleV2000</string>
+    <string name="candy_darknites_title">Darknites</string>
+    <string name="candy_rapier_title">Rapier</string>
+>>>>>>> 3d3adab... SETTINGS : Added about Team
 
 </resources>
