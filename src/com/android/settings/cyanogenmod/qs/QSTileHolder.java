@@ -182,6 +182,10 @@ public class QSTileHolder {
                 resourceName = "ic_dynamic_qs_adb";
                 stringId = R.string.qs_dynamic_tile_adb;
                 break;
+            case QSConstants.TILE_SCREENRECORD:
+                resourceName = "ic_qs_screenrecord";
+                stringId = R.string.qs_screenrecord_tile;
+                break;
             default:
                 return null;
         }

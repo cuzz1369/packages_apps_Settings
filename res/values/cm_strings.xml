@@ -1008,6 +1008,7 @@
     <string name="qs_tile_usb_tether">USB tethering</string>
     <string name="qs_tile_visualizer" translatable="false">AudioFX</string>
     <string name="qs_tile_wifi">Wi\u2011Fi</string>
+    <string name="qs_ambient_display">Ambient Display</string>
 
     <string name="qs_dynamic_tile_next_alarm">Next alarm</string>
     <string name="qs_dynamic_tile_ime_selector">IME selector</string>
@@ -1023,6 +1024,8 @@
     <string name="qs_advanced_location_summary">Enable advanced settings for location in Quick Settings</string>
 
     <string name="sim_no_number_set">No number assigned</string>
+
+    <string name="qs_screenrecord_tile">Screenrecord</string>
 
     <!-- Gesture Settings -->
     <!-- Settings main menu entry -->
