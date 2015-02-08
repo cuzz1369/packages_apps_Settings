@@ -17,7 +17,17 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
-        <!-- System update settings - launches activity -->
+	<!-- Candy logo -->
+	<PreferenceScreen android:key="candy_logo"
+	android:enabled="false"
+	android:layout="@layout/candy_logo" />
+
+	<!-- Candy team -->
+	<PreferenceScreen android:key="candy_team"
+	android:title="@string/candykat_team_title"
+	android:fragment="com.android.settings.candy.Team" />
+
+<!-- System update settings - launches activity -->
         <PreferenceScreen android:key="system_update_settings"
                 android:title="@string/system_update_settings_list_item_title" 
                 android:summary="@string/system_update_settings_list_item_summary">
