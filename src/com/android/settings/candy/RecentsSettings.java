@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.content.ContentResolver;
 import android.content.res.Resources;
+import android.content.pm.PackageManager;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -27,33 +28,42 @@ import android.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.R;
 
     public class RecentsSettings extends SettingsPreferenceFragment implements
-     Preference.OnPreferenceChangeListener {
+                Preference.OnPreferenceChangeListener {
     private static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+    private static final String KEY_OMNISWITCH = "omniswitch";
+    public static final String OMNISWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
     private SwitchPreference mRecentsClearAll;
     private ListPreference mRecentsClearAllLocation;
-     @Override
-   public void onCreate(Bundle icicle) {
-    super.onCreate(icicle);
-    addPreferencesFromResource(R.xml.recents_panel_settings);
-     PreferenceScreen prefSet = getPreferenceScreen();
-    ContentResolver resolver = getActivity().getContentResolver();
-    mRecentsClearAll = (SwitchPreference) prefSet.findPreference(SHOW_CLEAR_ALL_RECENTS);
-    mRecentsClearAll.setChecked(Settings.System.getIntForUser(resolver,
-     Settings.System.SHOW_CLEAR_ALL_RECENTS, 1, UserHandle.USER_CURRENT) == 1);
-    mRecentsClearAll.setOnPreferenceChangeListener(this);
-    mRecentsClearAllLocation = (ListPreference) prefSet.findPreference(RECENTS_CLEAR_ALL_LOCATION);
-     int location = Settings.System.getIntForUser(resolver,
-    Settings.System.RECENTS_CLEAR_ALL_LOCATION, 0, UserHandle.USER_CURRENT);
-    mRecentsClearAllLocation.setValue(String.valueOf(location));
-    mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
-    updateRecentsLocation(location);
+    private Preference mOmniSwitch;
+
+    @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+        addPreferencesFromResource(R.xml.recents_panel_settings);
+
+        PreferenceScreen prefSet = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
+        PackageManager pm = getPackageManager();
+
+        mRecentsClearAll = (SwitchPreference) prefSet.findPreference(SHOW_CLEAR_ALL_RECENTS);
+        mRecentsClearAll.setChecked(Settings.System.getIntForUser(resolver,
+            Settings.System.SHOW_CLEAR_ALL_RECENTS, 1, UserHandle.USER_CURRENT) == 1);
+        mRecentsClearAll.setOnPreferenceChangeListener(this);
+
+        mRecentsClearAllLocation = (ListPreference) prefSet.findPreference(RECENTS_CLEAR_ALL_LOCATION);
+        int location = Settings.System.getIntForUser(resolver,
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 0, UserHandle.USER_CURRENT);
+        mRecentsClearAllLocation.setValue(String.valueOf(location));
+        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
+        updateRecentsLocation(location);
+
+        mOmniSwitch = (Preference)
+                prefSet.findPreference(KEY_OMNISWITCH);
     }
-    
-public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mRecentsClearAll) {
             boolean show = (Boolean) objValue;
             Settings.System.putIntForUser(getActivity().getContentResolver(),
