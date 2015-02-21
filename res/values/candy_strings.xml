@@ -68,7 +68,6 @@
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>    
 
-<<<<<<< HEAD
    <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
@@ -78,7 +77,7 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
     <string name="color_default">Default</string>
-=======
+    
     <!-- OmniSwitch -->
     <string name="omniswitch_settings_title">OmniSwitch Settings</string>
     <string name="omniswitch_settings_summary">Enable and configure OmniSwitch recents</string>
@@ -98,6 +97,5 @@
     <string name="candy_cannondaleV2000_title">cannondaleV2000</string>
     <string name="candy_darknites_title">Darknites</string>
     <string name="candy_rapier_title">Rapier</string>
->>>>>>> 3d3adab... SETTINGS : Added about Team
 
 </resources>
