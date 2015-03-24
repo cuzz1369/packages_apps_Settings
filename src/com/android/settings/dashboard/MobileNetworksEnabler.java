@@ -106,6 +106,8 @@ public class MobileNetworksEnabler extends GenericSwitchToggle  {
                 setChecked(false);
                 break;
         }
+        setEnabled(mTelephonyManager.getDataState() != TelephonyManager.DATA_UNKNOWN);
+        setChecked(mTelephonyManager.getDataEnabled());
     }
 
     @Override
