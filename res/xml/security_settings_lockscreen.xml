@@ -46,6 +46,12 @@
             android:fragment="com.android.settings.cyanogenmod.LockscreenShortcuts"
             android:title="@string/lockscreen_targets_message"
             settings:advanced="true"/>
+                
+        <PreferenceScreen
+            android:key="lock_screen_weather_settings"
+	    android:title="@string/lock_screen_weather_settings_title"
+            android:summary="@string/lock_screen_weather_settings_title_summary"
+            android:fragment="com.android.settings.candy.LockScreenWeatherSettings"/>
 
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="lockscreen_visualizer"
@@ -53,12 +59,6 @@
             android:defaultValue="true"
             settings:advanced="true"/>
             
-        <PreferenceScreen
-            android:key="lockscreen_weather"
-            android:title="@string/lock_screen_weather_settings_title"
-            android:summary="@string/lock_screen_weather_settings_title_summary"
-            android:fragment="com.android.settings.rr.LockScreenWeatherSettings" />
- 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="double_tap_sleep_anywhere"
             android:title="@string/double_tap_sleep_anywhere_title"
