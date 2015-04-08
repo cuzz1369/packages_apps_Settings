@@ -156,7 +156,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String FORCE_HIGHEND_GFX_KEY = "pref_force_highend_gfx";
     private static final String FORCE_HIGHEND_GFX_PERSIST_PROP = "persist.sys.force_highendgfx";
-
     private static final String OPENGL_TRACES_KEY = "enable_opengl_traces";
 
     private static final String ROOT_ACCESS_KEY = "root_access";
@@ -1521,8 +1520,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 .show();
     }
 
-
-
     private void updateHighEndGfxOptions() {
         updateSwitchPreference(mForceHighEndGfx,
                 SystemProperties.getBoolean(FORCE_HIGHEND_GFX_PERSIST_PROP,
@@ -1730,8 +1727,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         } else if (preference == mDevelopmentShortcut) {
             writeDevelopmentShortcutOptions();
         } else if (preference == mKillAppLongpressBack) {
-            writeKillAppLongpressBackOptions();
-        
+            writeKillAppLongpressBackOptions();      
         } else if (preference == mForceHighEndGfx) {
             writeHighEndGfxOptions();
         } else {
