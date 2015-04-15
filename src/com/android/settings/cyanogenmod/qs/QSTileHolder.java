@@ -172,6 +172,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_kernel_adiutor";
                 stringId = R.string.qs_tile_kernel_adiutor;
                 break;
+            case QSConstants.TILE_MUSIC:
+                resourceName = "ic_qs_media_play";
+                stringId = R.string.qs_music_play_tile;
+                break;
 
             // Dynamic tiles
             case QSConstants.DYNAMIC_TILE_NEXT_ALARM:
