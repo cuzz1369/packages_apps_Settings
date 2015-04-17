@@ -22,7 +22,6 @@ Preference mRc420head;
 Preference mFlashalot;
 Preference mVenomtester;
 Preference mCuzz1369;
-Preference mCannondaleV2000;
 Preference mDarknites;
 Preference mRapier;
 Preference mjavelinanddart;
@@ -43,7 +42,6 @@ mRc420head = prefSet.findPreference("candy_rc420head");
 mFlashalot = prefSet.findPreference("candy_flashalot");
 mVenomtester = prefSet.findPreference("candy_venomtester");
 mCuzz1369 = prefSet.findPreference("candy_cuzz1369");
-mCannondaleV2000 = prefSet.findPreference("candy_cannondaleV2000");
 mDarknites = prefSet.findPreference("candy_darknites");
 mRapier = prefSet.findPreference("candy_rapier");
 mjavelinanddart = prefSet.findPreference("candy_javelinanddart");
@@ -89,9 +87,6 @@ Toast.makeText(getActivity(), "Theamer for CandyRoms, Loves To Break Clocks with
 Toast.LENGTH_LONG).show();
 } else if (preference == mCuzz1369) {
 Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, Not Batman",
-Toast.LENGTH_LONG).show();
-} else if (preference == mCannondaleV2000) {
-Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, Masttersr Of teh MD5 L@nuAg3",
 Toast.LENGTH_LONG).show();
 } else if (preference == mDarknites) {
 Toast.makeText(getActivity(), "Tester/Themer for CandyRoms, Holo is the name Holo is the game",

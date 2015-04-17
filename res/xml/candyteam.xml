@@ -44,9 +44,6 @@ android:title="@string/candy_venomtester_title" />
 android:key="candy_cuzz1369"
 android:title="@string/candy_cuzz1369_title" />
 <Preference
-android:key="candy_cannondaleV2000"
-android:title="@string/candy_cannondaleV2000_title" />
-<Preference
 android:key="candy_darknites"
 android:title="@string/candy_darknites_title" />
 <Preference
