@@ -25,6 +25,7 @@ Preference mCuzz1369;
 Preference mCannondaleV2000;
 Preference mDarknites;
 Preference mRapier;
+Preference mjavelinanddart;
 @Override
 public void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
@@ -45,6 +46,7 @@ mCuzz1369 = prefSet.findPreference("candy_cuzz1369");
 mCannondaleV2000 = prefSet.findPreference("candy_cannondaleV2000");
 mDarknites = prefSet.findPreference("candy_darknites");
 mRapier = prefSet.findPreference("candy_rapier");
+mjavelinanddart = prefSet.findPreference("candy_javelinanddart");
 }
 @Override
 public void onResume() {
@@ -96,6 +98,9 @@ Toast.makeText(getActivity(), "Tester/Themer for CandyRoms, Holo is the name Hol
 Toast.LENGTH_LONG).show();
 } else if (preference == mRapier) {
 Toast.makeText(getActivity(), "Master Tester for CandyRoms, You forgot something @Rc420head",
+Toast.LENGTH_LONG).show();
+} else if (preference == mjavelinanddart) {
+Toast.makeText(getActivity(), "ROM Maintainer for CandyRoms, Known for loving shi*** devices",
 Toast.LENGTH_LONG).show();
 } else {
 return super.onPreferenceTreeClick(preferenceScreen, preference);

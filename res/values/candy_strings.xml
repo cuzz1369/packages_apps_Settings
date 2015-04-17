@@ -38,6 +38,24 @@
     <string name="interface_title">Interface</string>
     <string name="controls_title">Controls</string>
     <string name="userpsace_title">Userspace</string>
+    
+   
+	<!-- CandyRoms team -->
+	<string name="candykat_team_title">CandyRoms team</string>
+    <string name="candy_matthew0776_title">matthew0776</string>
+    <string name="candy_mar5hal_title">mar5hal</string>
+    <string name="candy_CyberScopes_title">CyberScopes</string>
+    <string name="candy_gimmeitorilltell_title">gimmeitorilltell</string>
+    <string name="candy_BMP7777_title">BMP7777</string>
+    <string name="candy_tr1gg3r84_title">tr1gg3r84</string>
+    <string name="candy_rc420head_title">rc420head</string>
+    <string name="candy_flashalot_title">flashalot aka Brickalot</string>
+    <string name="candy_venomtester_title">Venomtester</string>
+    <string name="candy_cuzz1369_title">cuzz1369</string>
+    <string name="candy_cannondaleV2000_title">cannondaleV2000</string>
+    <string name="candy_darknites_title">Darknites</string>
+    <string name="candy_rapier_title">Rapier</string>
+    <string name="candy_javelinanddart_title">javelinanddart</string>
 
     <!-- AOKP custom system animations -->  
     <string name="aokp_animation_title">System animations</string>
