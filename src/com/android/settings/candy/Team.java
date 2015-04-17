@@ -60,28 +60,28 @@ if (preference == mMatthew0776) {
 Toast.makeText(getActivity(), "Co-Owner Of CandyRoms, Loves Making Icon Packs With Eclipse",
 Toast.LENGTH_LONG).show();
 } else if (preference == mMar5hal) {
-Toast.makeText(getActivity(), "Co-Owner Of CandyRoms, Much cool such dev wow :)",
+Toast.makeText(getActivity(), "Co-Owner Of CandyRoms, Much cool such dev wow)",
 Toast.LENGTH_LONG).show();
 } else if (preference == mCyberScopes) {
-Toast.makeText(getActivity(), "Theamer for CandyRoms, Part Time Slave To School",
+Toast.makeText(getActivity(), "Themer for CandyRoms, Part Time Slave To School",
 Toast.LENGTH_LONG).show();
 } else if (preference == mGimmeitorilltell) {
-Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, KeyWords Damint Bobby",
+Toast.makeText(getActivity(), "ROM Mantaner for CandyRoms, Keywords: Dammit Bobby",
 Toast.LENGTH_LONG).show();
 } else if (preference == mBMP7777) {
-Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, LOVES The Samsung Galaxay Tab 3 7.0 Sprint",
+Toast.makeText(getActivity(), "ROM Mantaner for CandyRoms, LOVES The Sprint Samsung Galaxay Tab 3 7.0",
 Toast.LENGTH_LONG).show();
 } else if (preference == mRc420head) {
-Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, Did Someone Say Pot?!?!",
+Toast.makeText(getActivity(), "ROM Mantaner for CandyRoms, Did Someone Say Pot?!?!",
 Toast.LENGTH_LONG).show();
 } else if (preference == mFlashalot) {
-Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, Dont Test His Zips",
+Toast.makeText(getActivity(), "ROM Mantaner for CandyRoms, Don't Test His Zips",
 Toast.LENGTH_LONG).show();
 } else if (preference == mVenomtester) {
-Toast.makeText(getActivity(), "Theamer for CandyRoms, Loves To Break Clocks with his themes",
+Toast.makeText(getActivity(), "Themer for CandyRoms, Loves To Break Clocks with his themes",
 Toast.LENGTH_LONG).show();
 } else if (preference == mCuzz1369) {
-Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, Not Batman",
+Toast.makeText(getActivity(), "ROM Mantaner for CandyRoms, NOT Batman",
 Toast.LENGTH_LONG).show();
 } else if (preference == mDarknites) {
 Toast.makeText(getActivity(), "Tester/Themer for CandyRoms, Holo is the name Holo is the game",
