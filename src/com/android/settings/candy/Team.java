@@ -17,7 +17,6 @@ Preference mMar5hal;
 Preference mCyberScopes;
 Preference mGimmeitorilltell;
 Preference mBMP7777;
-Preference mTr1gg3r84;
 Preference mRc420head;
 Preference mFlashalot;
 Preference mVenomtester;
@@ -37,7 +36,6 @@ mMar5hal = prefSet.findPreference("candy_mar5hal");
 mCyberScopes = prefSet.findPreference("candy_CyberScopes");
 mGimmeitorilltell = prefSet.findPreference("candy_gimmeitorilltell");
 mBMP7777 = prefSet.findPreference("candy_BMP7777");
-mTr1gg3r84 = prefSet.findPreference("candy_tr1gg3r84");
 mRc420head = prefSet.findPreference("candy_rc420head");
 mFlashalot = prefSet.findPreference("candy_flashalot");
 mVenomtester = prefSet.findPreference("candy_venomtester");
@@ -72,9 +70,6 @@ Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, KeyWords Damint Bobby
 Toast.LENGTH_LONG).show();
 } else if (preference == mBMP7777) {
 Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, LOVES The Samsung Galaxay Tab 3 7.0 Sprint",
-Toast.LENGTH_LONG).show();
-} else if (preference == mTr1gg3r84) {
-Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, The BIGGEST GIMP!!! :P",
 Toast.LENGTH_LONG).show();
 } else if (preference == mRc420head) {
 Toast.makeText(getActivity(), "Rom Mantaner for CandyRoms, Did Someone Say Pot?!?!",
