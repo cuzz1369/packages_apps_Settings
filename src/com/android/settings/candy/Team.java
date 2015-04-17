@@ -60,7 +60,7 @@ if (preference == mMatthew0776) {
 Toast.makeText(getActivity(), "Co-Owner Of CandyRoms, Loves Making Icon Packs With Eclipse",
 Toast.LENGTH_LONG).show();
 } else if (preference == mMar5hal) {
-Toast.makeText(getActivity(), "Co-Owner Of CandyRoms, Much cool such dev wow)",
+Toast.makeText(getActivity(), "Co-Owner Of CandyRoms, Gimme all yo candy b*tches, Asian with a white boy name)",
 Toast.LENGTH_LONG).show();
 } else if (preference == mCyberScopes) {
 Toast.makeText(getActivity(), "Themer for CandyRoms, Part Time Slave To School",
