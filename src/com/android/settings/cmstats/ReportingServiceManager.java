@@ -67,7 +67,8 @@ public class ReportingServiceManager extends BroadcastReceiver {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + millisFromNow,
                 PendingIntent.getBroadcast(context, 0, intent, 0));
-        Log.d(ReportingService.TAG, "Next sync attempt in : " + millisFromNow / MILLIS_PER_HOUR + " hours");
+        Log.d(ReportingService.TAG, "Next sync attempt in : "
+                + millisFromNow / MILLIS_PER_HOUR + " hours");
     }
 
     public static void launchService(Context context) {
@@ -89,9 +90,12 @@ public class ReportingServiceManager extends BroadcastReceiver {
             setAlarm(context, 0);
             return;
         }
-        long timeLeft = System.currentTimeMillis() - lastSynced;
-        if (timeLeft < UPDATE_INTERVAL) {
-            Log.d(ReportingService.TAG, "Waiting for next sync : " + timeLeft / MILLIS_PER_HOUR + " hours");
+
+        long timeElapsed = System.currentTimeMillis() - lastSynced;
+        if (timeElapsed < UPDATE_INTERVAL) {
+            long timeLeft = UPDATE_INTERVAL - timeElapsed;
+            Log.d(ReportingService.TAG, "Waiting for next sync : "
+                    + timeLeft / MILLIS_PER_HOUR + " hours");
             return;
         }
 
