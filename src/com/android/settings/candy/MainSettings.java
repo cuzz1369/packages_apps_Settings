@@ -49,7 +49,6 @@ import com.android.settings.R;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class MainSettings extends SettingsPreferenceFragment  implements
         Preference.OnPreferenceChangeListener, Indexable {
 private static final String TAG = "MainSettings";
@@ -66,6 +65,9 @@ private static final String TAG = "MainSettings";
 
       }
      
+        
+        
+        
          @Override
      public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();

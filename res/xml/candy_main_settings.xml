@@ -71,7 +71,12 @@
         android:title="@string/title_heads_up"
         android:summary="@string/summary_heads_up"
         android:fragment="com.android.settings.candy.HeadsUpSettings" />
-
+ 
+    <!-- Navigation bar -->
+      <PreferenceScreen
+           android:key="navigation_bar"
+           android:fragment="com.android.settings.vanir.NavbarInterface"
+           android:title="@string/category_navbar" />
            
     <!-- Notification drawer -->
     <PreferenceScreen
@@ -79,7 +84,7 @@
         android:title="@string/notification_drawer_title"
         android:summary="@string/summary_notification_drawer"
         android:fragment="com.android.settings.cyanogenmod.NotificationDrawerSettings"
-        settings:advanced="true"/>
+        settings:advanced="true"/>       
     
     <!-- Recents Panel -->
     <PreferenceScreen

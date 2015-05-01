@@ -90,8 +90,6 @@ public class NavBar extends Fragment implements View.OnClickListener {
                             if (mEditMode) {
                                 toggleEditMode(false, false);
                             }
-                            Settings.System.putString(getActivity().getContentResolver(),
-                                    Settings.System.NAV_BUTTONS, null);
                             toggleEditMode(true, false);
                             toggleEditMode(false, false);
                             mEditMode = false;
