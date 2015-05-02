@@ -24,6 +24,7 @@ Preference mCuzz1369;
 Preference mDarknites;
 Preference mRapier;
 Preference mjavelinanddart;
+Preference mtimmytim;
 @Override
 public void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
@@ -43,6 +44,7 @@ mCuzz1369 = prefSet.findPreference("candy_cuzz1369");
 mDarknites = prefSet.findPreference("candy_darknites");
 mRapier = prefSet.findPreference("candy_rapier");
 mjavelinanddart = prefSet.findPreference("candy_javelinanddart");
+mtimmytim = prefSet.findPreference("candy_timmytim");
 }
 @Override
 public void onResume() {
@@ -66,22 +68,22 @@ Toast.LENGTH_LONG).show();
 Toast.makeText(getActivity(), "Themer for CandyRoms, Part Time Slave To School",
 Toast.LENGTH_LONG).show();
 } else if (preference == mGimmeitorilltell) {
-Toast.makeText(getActivity(), "ROM Mantaner for CandyRoms, Keywords: Dammit Bobby",
+Toast.makeText(getActivity(), "ROM Mantainer for CandyRoms, Keywords: Dammit Bobby",
 Toast.LENGTH_LONG).show();
 } else if (preference == mBMP7777) {
-Toast.makeText(getActivity(), "ROM Mantaner for CandyRoms, LOVES The Sprint Samsung Galaxay Tab 3 7.0",
+Toast.makeText(getActivity(), "ROM Mantainer for CandyRoms, LOVES The Sprint Samsung Galaxay Tab 3 7.0",
 Toast.LENGTH_LONG).show();
 } else if (preference == mRc420head) {
-Toast.makeText(getActivity(), "ROM Mantaner for CandyRoms, Did Someone Say Pot?!?!",
+Toast.makeText(getActivity(), "ROM Mantainer for CandyRoms, Did Someone Say Pot?!?!",
 Toast.LENGTH_LONG).show();
 } else if (preference == mFlashalot) {
-Toast.makeText(getActivity(), "ROM Mantaner for CandyRoms, Don't Test His Zips",
+Toast.makeText(getActivity(), "ROM Mantainer for CandyRoms, Don't Test His Zips",
 Toast.LENGTH_LONG).show();
 } else if (preference == mVenomtester) {
 Toast.makeText(getActivity(), "Themer for CandyRoms, Loves To Break Clocks with his themes",
 Toast.LENGTH_LONG).show();
 } else if (preference == mCuzz1369) {
-Toast.makeText(getActivity(), "ROM Mantaner for CandyRoms, NOT Batman",
+Toast.makeText(getActivity(), "ROM Mantainer for CandyRoms, NOT Batman",
 Toast.LENGTH_LONG).show();
 } else if (preference == mDarknites) {
 Toast.makeText(getActivity(), "Tester/Themer for CandyRoms, Holo is the name Holo is the game",
@@ -91,6 +93,9 @@ Toast.makeText(getActivity(), "Master Tester for CandyRoms, You forgot something
 Toast.LENGTH_LONG).show();
 } else if (preference == mjavelinanddart) {
 Toast.makeText(getActivity(), "ROM Maintainer for CandyRoms, Known for loving shi*** devices",
+Toast.LENGTH_LONG).show();
+} else if (preference == mtimmytim) {
+Toast.makeText(getActivity(), "ROM Builder, If I was a Ninja Turtle...I would be Leonardo of course!!!",
 Toast.LENGTH_LONG).show();
 } else {
 return super.onPreferenceTreeClick(preferenceScreen, preference);
