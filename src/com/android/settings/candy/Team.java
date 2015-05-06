@@ -24,6 +24,7 @@ Preference mCuzz1369;
 Preference mDarknites;
 Preference mRapier;
 Preference mjavelinanddart;
+Preference mcalebcabob;
 Preference mtimmytim;
 @Override
 public void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,7 @@ mCuzz1369 = prefSet.findPreference("candy_cuzz1369");
 mDarknites = prefSet.findPreference("candy_darknites");
 mRapier = prefSet.findPreference("candy_rapier");
 mjavelinanddart = prefSet.findPreference("candy_javelinanddart");
+mcalebcabob = prefSet.findPreference("candy_calebcabob");
 mtimmytim = prefSet.findPreference("candy_timmytim");
 }
 @Override
@@ -93,6 +95,9 @@ Toast.makeText(getActivity(), "Master Tester for CandyRoms, You forgot something
 Toast.LENGTH_LONG).show();
 } else if (preference == mjavelinanddart) {
 Toast.makeText(getActivity(), "ROM Maintainer for CandyRoms, Known for loving shi*** devices",
+Toast.LENGTH_LONG).show();
+} else if (preference == mcalebcabob) {
+Toast.makeText(getActivity(), "Git Commit Search Engine aka DJ aka Tester for CandyRoms",
 Toast.LENGTH_LONG).show();
 } else if (preference == mtimmytim) {
 Toast.makeText(getActivity(), "ROM Builder, If I was a Ninja Turtle...I would be Leonardo of course!!!",

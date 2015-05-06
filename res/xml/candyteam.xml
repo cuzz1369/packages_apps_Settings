@@ -49,4 +49,7 @@ android:title="@string/candy_rapier_title" />
 <Preference
 android:key="candy_javelinanddart"
 android:title="@string/candy_javelinanddart_title" />
+<Preference
+android:key="candy_calebcabob"
+android:title="@string/candy_calebcabob_title" />
 </PreferenceScreen>
