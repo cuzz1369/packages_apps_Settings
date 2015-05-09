@@ -197,15 +197,10 @@ public final class Utils {
 
         return false;
     }
-
-    public static boolean doesIntentResolve(Context context, Intent intent) {
-        PackageManager packageManager = context.getPackageManager();
-        return packageManager.queryIntentActivities(intent, 0).size() > 0;
-    }
-
-    /**
+    
+     /**
      * Finds a matching activity for a preference's intent. If a matching
-     * activity is not found, it will remove the preference. The icon, title and
+     * activity is not found, it will remove the preference. The title and
      * summary of the preference will also be updated with the values retrieved
      * from the activity's meta-data elements. If no meta-data elements are
      * specified then the preference title will be set to match the label of the
@@ -220,8 +215,7 @@ public final class Utils {
      * @return Whether an activity was found. If false, the preference was
      *         removed.
      *
-     * @see {@link #META_DATA_PREFERENCE_ICON}
-     *      {@link #META_DATA_PREFERENCE_TITLE}
+     * @see {@link #META_DATA_PREFERENCE_TITLE}
      *      {@link #META_DATA_PREFERENCE_SUMMARY}
      */
     public static boolean updatePreferenceToSpecificActivityFromMetaDataOrRemove(Context context,
@@ -242,7 +236,6 @@ public final class Utils {
                 ResolveInfo resolveInfo = list.get(i);
                 if ((resolveInfo.activityInfo.applicationInfo.flags
                         & ApplicationInfo.FLAG_SYSTEM) != 0) {
-                    Drawable icon = null;
                     String title = null;
                     String summary = null;
 
@@ -253,9 +246,6 @@ public final class Utils {
                         Bundle metaData = resolveInfo.activityInfo.metaData;
 
                         if (res != null && metaData != null) {
-                            if (preference instanceof IconPreferenceScreen) {
-                                icon = res.getDrawable(metaData.getInt(META_DATA_PREFERENCE_ICON));
-                            }
                             title = res.getString(metaData.getInt(META_DATA_PREFERENCE_TITLE));
                             summary = res.getString(metaData.getInt(META_DATA_PREFERENCE_SUMMARY));
                         }
@@ -271,13 +261,9 @@ public final class Utils {
                         title = resolveInfo.loadLabel(pm).toString();
                     }
 
-                    // Set icon, title and summary for the preference
+                    // Set title and summary for the preference
                     preference.setTitle(title);
                     preference.setSummary(summary);
-                    if (preference instanceof IconPreferenceScreen) {
-                        IconPreferenceScreen iconPreference = (IconPreferenceScreen) preference;
-                        iconPreference.setIcon(icon);
-                    }
 
                     // Replace the intent with this specific activity
                     preference.setIntent(new Intent().setClassName(
@@ -293,6 +279,12 @@ public final class Utils {
         parentPreferenceGroup.removePreference(preference);
 
         return false;
+    }
+
+
+    public static boolean doesIntentResolve(Context context, Intent intent) {
+        PackageManager packageManager = context.getPackageManager();
+        return packageManager.queryIntentActivities(intent, 0).size() > 0;
     }
 
     public static boolean updateTileToSpecificActivityFromMetaDataOrRemove(Context context,

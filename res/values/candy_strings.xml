@@ -541,5 +541,16 @@
     <string name="clock_font_light">Light</string>
     <string name="clock_font_light_italic">Light Italic</string>
     <string name="clock_font_normal">Normal</string>
+
+    <!-- Device handler -->
+    <string name="screen_off_gesture_settings_title">Screen off gestures</string>
+    <string name="shortcut_action_ring_vib">Ring/Vib</string>
+    <string name="shortcut_action_ring_silent">Ring/Silent</string>
+    <string name="shortcut_action_ring_vib_silent">Ring/Vib/Silent</string>
+    <string name="shortcut_action_camera">Camera</string>
+    <string name="shortcut_action_media_next">Music - next track</string>
+    <string name="shortcut_action_media_play_pause">Music - play/pause</string>
+    <string name="shortcut_action_media_previous">Music - previous track</string>
+    <string name="shortcut_action_wake_device">Wake up device</string>
     
 </resources>
