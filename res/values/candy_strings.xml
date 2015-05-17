@@ -312,6 +312,15 @@
     <string name="heads_up_time_out_10sec">10 seconds</string>
     <string name="heads_up_time_out_never">Never</string>
 
+    <!-- Heads up colors -->
+    <string name="heads_up_bg_color_title">Background color</string>
+    <string name="heads_up_text_color_title">Text color</string>
+    <string name="heads_up_colors_title">Custom Colors</string>
+    <string name="heads_up_colors_summary">Customize heads up text and background color</string>
+    <string name="dlg_reset_values_message">Reset values to\nAndroid- or candy default?</string>
+    <string name="dlg_reset_android">Android</string>
+    <string name="dlg_reset_candy">candy</string>
+
     <!-- Heads up touch outside -->
     <string name="heads_up_touch_outside_title">Touch outside behavior</string>
     <string name="heads_up_touch_outside_summary_enabled">Hide notification on touch outside and on home button press</string>
