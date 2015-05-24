@@ -80,19 +80,33 @@ import com.android.settings.SettingsPreferenceFragment;
         return false;
     }
     private void updateRecentsLocation(int value) {
-   ContentResolver resolver = getContentResolver();
-   Resources res = getResources();
-   int summary = -1;
-     Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, value);
-   if (value == 0) {
-   Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 0);
-   summary = R.string.recents_clear_all_location_right;
-   } else if (value == 1) {
-   Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 1);
-     summary = R.string.recents_clear_all_location_left;
-  }
-   if (mRecentsClearAllLocation != null && summary != -1) {
-     mRecentsClearAllLocation.setSummary(res.getString(summary));
-    }
-  }
+         ContentResolver resolver = getContentResolver();
+         Resources res = getResources();
+         int summary = -1;
+ 
+         Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, value);
+ 
+         if (value == 0) {
+             Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 0);
+             summary = R.string.recents_clear_all_location_top_right;
+         } else if (value == 1) {
+             Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 1);
+             summary = R.string.recents_clear_all_location_top_center;
+         } else if (value == 2) {
+             Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 2);
+             summary = R.string.recents_clear_all_location_top_left;
+         } else if (value == 3) {
+             Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3);
+             summary = R.string.recents_clear_all_location_bottom_right;
+         } else if (value == 4) {
+             Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 4);
+             summary = R.string.recents_clear_all_location_bottom_center;
+         } else if (value == 5) {
+            Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 5);
+             summary = R.string.recents_clear_all_location_bottom_left;
+         }
+         if (mRecentsClearAllLocation != null && summary != -1) {
+             mRecentsClearAllLocation.setSummary(res.getString(summary));
+         }
+     }
 }
