@@ -16,7 +16,6 @@ Preference mMatthew0776;
 Preference mMar5hal;
 Preference mCyberScopes;
 Preference mGimmeitorilltell;
-Preference mBMP7777;
 Preference mRc420head;
 Preference mFlashalot;
 Preference mVenomtester;
@@ -26,6 +25,7 @@ Preference mRapier;
 Preference mjavelinanddart;
 Preference mcalebcabob;
 Preference mtimmytim;
+Preference mp70shooter;
 @Override
 public void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
@@ -47,6 +47,7 @@ mRapier = prefSet.findPreference("candy_rapier");
 mjavelinanddart = prefSet.findPreference("candy_javelinanddart");
 mcalebcabob = prefSet.findPreference("candy_calebcabob");
 mtimmytim = prefSet.findPreference("candy_timmytim");
+mp70shooter = prefSet.findPreference("candy_p70shooter");
 }
 @Override
 public void onResume() {
@@ -101,6 +102,9 @@ Toast.makeText(getActivity(), "Git Commit Search Engine aka DJ aka Tester for Ca
 Toast.LENGTH_LONG).show();
 } else if (preference == mtimmytim) {
 Toast.makeText(getActivity(), "ROM Builder, If I was a Ninja Turtle...I would be Leonardo of course!!!",
+Toast.LENGTH_LONG).show();
+} else if (preference == mp70shooter) {
+Toast.makeText(getActivity(), "Deals with the noobs so we don't have to",
 Toast.LENGTH_LONG).show();
 } else {
 return super.onPreferenceTreeClick(preferenceScreen, preference);

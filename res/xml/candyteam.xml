@@ -10,46 +10,65 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<PreferenceScreen
-xmlns:android="http://schemas.android.com/apk/res/android"
-android:title="@string/candykat_team_title">
-<Preference
-android:key="candy_matthew0776"
-android:title="@string/candy_matthew0776_title" />
-<Preference
-android:key="candy_mar5hal"
-android:title="@string/candy_mar5hal_title" />
-<Preference
-android:key="candy_CyberScopes"
-android:title="@string/candy_CyberScopes_title" />
-<Preference
-android:key="candy_gimmeitorilltell"
-android:title="@string/candy_gimmeitorilltell_title" />
-<Preference
-android:key="candy_BMP7777"
-android:title="@string/candy_BMP7777_title" />
-<Preference
-android:key="candy_rc420head"
-android:title="@string/candy_rc420head_title" />
-<Preference
-android:key="candy_flashalot"
-android:title="@string/candy_flashalot_title" />
-<Preference
-android:key="candy_venomtester"
-android:title="@string/candy_venomtester_title" />
-<Preference
-android:key="candy_cuzz1369"
-android:title="@string/candy_cuzz1369_title" />
-<Preference
-android:key="candy_darknites"
-android:title="@string/candy_darknites_title" />
-<Preference
-android:key="candy_rapier"
-android:title="@string/candy_rapier_title" />
-<Preference
-android:key="candy_javelinanddart"
-android:title="@string/candy_javelinanddart_title" />
-<Preference
-android:key="candy_calebcabob"
-android:title="@string/candy_calebcabob_title" />
-</PreferenceScreen>
+
+   <PreferenceScreen
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:title="@string/candykat_team_title">
+
+	<Preference
+	android:key="candy_matthew0776"
+	android:title="@string/candy_matthew0776_title" />
+
+	<Preference
+	android:key="candy_mar5hal"
+	android:title="@string/candy_mar5hal_title" />
+
+	<Preference
+	android:key="candy_CyberScopes"
+	android:title="@string/candy_CyberScopes_title" />
+
+	<Preference
+	android:key="candy_gimmeitorilltell"
+	android:title="@string/candy_gimmeitorilltell_title" />
+
+	<Preference
+	android:key="candy_rc420head"
+	android:title="@string/candy_rc420head_title" />
+
+	<Preference
+	android:key="candy_flashalot"
+	android:title="@string/candy_flashalot_title" />
+
+	<Preference
+	android:key="candy_venomtester"
+	android:title="@string/candy_venomtester_title" />
+
+	<Preference
+	android:key="candy_cuzz1369"
+	android:title="@string/candy_cuzz1369_title" />
+
+	<Preference
+	android:key="candy_darknites"
+	android:title="@string/candy_darknites_title" />
+
+	<Preference
+	android:key="candy_rapier"
+	android:title="@string/candy_rapier_title" />
+
+	<Preference
+	android:key="candy_javelinanddart"
+	android:title="@string/candy_javelinanddart_title" />
+	
+	<Preference
+	android:key="candy_timmytim"
+	android:title="@string/candy_timmytim_title" />
+
+	<Preference
+	android:key="candy_calebcabob"
+	android:title="@string/candy_calebcabob_title" />
+
+	<Preference
+	android:key="candy_p70shooter"
+	android:title="@string/candy_p70shooter_title" />
+
+   </PreferenceScreen>

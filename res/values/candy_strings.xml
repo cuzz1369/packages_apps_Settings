@@ -43,7 +43,6 @@
     <string name="candy_mar5hal_title">mar5hal</string>
     <string name="candy_CyberScopes_title">CyberScopes</string>
     <string name="candy_gimmeitorilltell_title">gimmeitorilltell</string>
-    <string name="candy_BMP7777_title">BMP7777</string>
     <string name="candy_rc420head_title">rc420head</string>
     <string name="candy_flashalot_title">flashalot aka Brickalot</string>
     <string name="candy_venomtester_title">Venomtester</string>
@@ -52,6 +51,7 @@
     <string name="candy_rapier_title">Rapier</string>
     <string name="candy_javelinanddart_title">javelinanddart</string>
     <string name="candy_calebcabob_title">calebcabob</string>
+    <string name="candy_p70shooter_title">p70shooter</string>
 
     <!-- Recents panel settings -->
     <string name="show_clear_all_recents_button_title">Clear all recents button</string>
