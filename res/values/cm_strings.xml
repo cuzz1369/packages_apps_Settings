@@ -1177,7 +1177,6 @@
     <string name="battery_saver_summary">Reduce performance and limit background data</string>
     <string name="battery_saver_summary_unavailable">Not available while charging</string>
 
-<<<<<<< HEAD
     <!-- Heads up -->
     <string name="heads_up_notifications">Heads up</string>
     <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
@@ -1334,7 +1333,7 @@
     <string name="battery_info_status_charging_dock_ac">Charging on Dock AC</string>
     <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
     <string name="battery_info_status_charging_dock_usb">Charging over Dock USB</string>
-=======
+
     <!-- Anonymous Statistics #CM -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">CyanogenMod statistics</string>
@@ -1354,5 +1353,5 @@
     <string name="preview_version_title">Version</string>
     <string name="preview_country_title">Country</string>
     <string name="preview_carrier_title">Carrier</string>
->>>>>>> acc6dea... Settings: Anonymous Statistics (CMStats)
+
 </resources>
