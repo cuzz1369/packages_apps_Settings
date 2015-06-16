@@ -18,11 +18,15 @@ package com.android.settings.eos;
 
 import java.util.ArrayList;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 import com.android.settings.R;
 
 import android.app.ActionBar;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.preference.SwitchPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
@@ -40,6 +44,8 @@ public class NxSettings extends ActionFragment implements
     SwitchPreference mAnimateLogo;
     SwitchPreference mShowPulse;
     SwitchPreference mShowRipple;
+
+    ColorPickerPreference mLogoColor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,6 +73,12 @@ public class NxSettings extends ActionFragment implements
         mAnimateLogo.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.NX_LOGO_ANIMATES, 1) == 1);
         mAnimateLogo.setOnPreferenceChangeListener(this);
+
+        int color = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.NX_LOGO_COLOR, Color.WHITE, UserHandle.USER_CURRENT);
+        mLogoColor = (ColorPickerPreference) findPreference("eos_nx_logo_color");
+        mLogoColor.setNewPreviewColor(color);
+        mLogoColor.setOnPreferenceChangeListener(this);
 
         mShowRipple = (SwitchPreference) findPreference("eos_nx_show_ripple");
         mShowRipple.setChecked(Settings.System.getInt(getContentResolver(),
@@ -100,6 +112,11 @@ public class NxSettings extends ActionFragment implements
             boolean enabled = ((Boolean) newValue).booleanValue();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.NX_LOGO_ANIMATES, enabled ? 1 : 0);
+            return true;
+        } else if (preference.equals(mLogoColor)) {
+            int color = ((Integer) newValue).intValue();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NX_LOGO_COLOR, color);
             return true;
         } else if (preference.equals(mShowPulse)) {
             boolean enabled = ((Boolean) newValue).booleanValue();
