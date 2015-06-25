@@ -40,19 +40,10 @@
     <string name="Recents_panel">Recents panel</string>
     <string name="summary_recents_panel">Customize recent panel options (ie. clear all, search bar etc)</string>
 
-    <!-- Superuser indicator-->
-    <string name="su_indicator">Superuser indicator</string>
-    <string name="su_indicator_summary">Show superuser indicator when a session is active</string>
-
     <string name="interface_title">Interface</string>
     <string name="controls_title">Controls</string>
     <string name="userpsace_title">Userspace</string>
     
-    <!-- Status bar ticker -->
-    <string name="status_bar_ticker_title">Notification Ticker</string>
-    <string name="status_bar_ticker_summary">Notification text animation in the statusbar</string>
-
-
    <!-- Custom navigation bar targets -->
     <string name="choose_action_double_tap_title">Choose double tap action</string>
     <string name="choose_action_title">Choose action</string>
