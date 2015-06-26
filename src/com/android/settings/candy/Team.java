@@ -91,7 +91,7 @@ Toast.LENGTH_LONG).show();
 Toast.makeText(getActivity(), "Master Tester for CandyRoms, You forgot something @Rc420head",
 Toast.LENGTH_LONG).show();
 } else if (preference == mjavelinanddart) {
-Toast.makeText(getActivity(), "ROM Maintainer for CandyRoms, Known for loving shi*** devices",
+Toast.makeText(getActivity(), "Device Maintainer Team Lead",
 Toast.LENGTH_LONG).show();
 } else if (preference == mcalebcabob) {
 Toast.makeText(getActivity(), "Git Commit Search Engine aka DJ aka Tester for CandyRoms",
