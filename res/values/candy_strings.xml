@@ -663,5 +663,9 @@
     <!-- Lockscreen wallpaper -->
     <string name="lockscreen_wallpaper_title">Wallpaper</string>
     <string name="lockscreen_wallpaper_summary">Set lockscreen wallpaper</string>
-
+    
+    <!-- Floating/Multi Window -->
+    <string name="qs_tile_slim_floats">Slim Floats</string>
+    <string name="slim_action_floats">Slim Actions and Pie</string>
+    <string name="slim_action_floats_summary">Launch Slim and Pie Actions in Floating Window Mode</string>
 </resources>
