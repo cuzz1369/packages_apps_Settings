@@ -74,4 +74,8 @@ limitations under the License.
 	android:key="candy_p70shooter"
 	android:title="@string/candy_p70shooter_title" />
 
+	<Preference
+	android:key="candy_NoSpamDan"
+	android:title="@string/candy_NoSpamDan_title" />
+
    </PreferenceScreen>
