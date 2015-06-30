@@ -26,6 +26,7 @@ Preference mjavelinanddart;
 Preference mcalebcabob;
 Preference mtimmytim;
 Preference mp70shooter;
+Preference mNoSpamDan;
 @Override
 public void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ mjavelinanddart = prefSet.findPreference("candy_javelinanddart");
 mcalebcabob = prefSet.findPreference("candy_calebcabob");
 mtimmytim = prefSet.findPreference("candy_timmytim");
 mp70shooter = prefSet.findPreference("candy_p70shooter");
+mNoSpamDan = prefSet.findPreference("candy_NoSpamDan");
 }
 @Override
 public void onResume() {
@@ -101,6 +103,9 @@ Toast.makeText(getActivity(), "ROM Builder, If I was a Ninja Turtle...I would be
 Toast.LENGTH_LONG).show();
 } else if (preference == mp70shooter) {
 Toast.makeText(getActivity(), "Deals with the noobs so we don't have to",
+Toast.LENGTH_LONG).show();
+} else if (preference == mNoSpamDan) {
+Toast.makeText(getActivity(), "ROM Mantainer for CandyRoms, MANTRA: Release the meteor!",
 Toast.LENGTH_LONG).show();
 } else {
 return super.onPreferenceTreeClick(preferenceScreen, preference);
