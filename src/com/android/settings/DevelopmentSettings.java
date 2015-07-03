@@ -77,6 +77,12 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.candy.util.AbstractAsyncSuCMDProcessor;
+import com.android.settings.candy.util.CMDProcessor;
+import com.android.settings.candy.util.Helpers;
+import java.io.DataOutputStream;
+
 /*
  * Displays preferences for application developers.
  */
@@ -151,6 +157,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final String SELECT_LOGD_SIZE_KEY = "select_logd_size";
     private static final String SELECT_LOGD_SIZE_PROPERTY = "persist.logd.size";
     private static final String SELECT_LOGD_DEFAULT_SIZE_PROPERTY = "ro.logd.size";
+    private static final String SELINUX = "selinux";
 
     private static final String OPENGL_TRACES_KEY = "enable_opengl_traces";
 
@@ -267,6 +274,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private SwitchPreference mAdvancedReboot;
 
     private SwitchPreference mDevelopmentShortcut;
+    
+    private SwitchPreference mSelinux;
 
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
@@ -342,8 +351,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mAllPrefs.add(mPassword);
         mAdvancedReboot = findAndInitSwitchPref(ADVANCED_REBOOT_KEY);
         mDevelopmentShortcut = findAndInitSwitchPref(DEVELOPMENT_SHORTCUT_KEY);
-
-
+        
+        
         if (!android.os.Process.myUserHandle().equals(UserHandle.OWNER)) {
             disableForUser(mEnableAdb);
             disableForUser(mClearAdbKeys);
@@ -413,6 +422,20 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mResetSwitchPrefs.add(mShowAllANRs);
 
         mKillAppLongpressBack = findAndInitSwitchPref(KILL_APP_LONGPRESS_BACK);
+        
+        //SELinux
+        mSelinux = (SwitchPreference) findPreference(SELINUX);
+        mSelinux.setOnPreferenceChangeListener(this);
+
+        if (CMDProcessor.runSuCommand("getenforce").getStdout().contains("Enforcing")) {
+            mSelinux.setChecked(true);
+            mSelinux.setSummary(R.string.selinux_enforcing_title);
+        } else {
+            mSelinux.setChecked(false);
+            mSelinux.setSummary(R.string.selinux_permissive_title);
+        }
+
+
 
         // Back long press timeout
         mKillAppLongpressTimeout = addListPreference(KILL_APP_LONGPRESS_TIMEOUT);
@@ -1809,6 +1832,15 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 mRootDialog.setOnDismissListener(this);
             } else {
                 writeRootAccessOptions(newValue);
+            }
+            return true;
+            } else if (preference == mSelinux) {
+            if (newValue.toString().equals("true")) {
+                CMDProcessor.runSuCommand("setenforce 1");
+                mSelinux.setSummary(R.string.selinux_enforcing_title);
+            } else if (newValue.toString().equals("false")) {
+                CMDProcessor.runSuCommand("setenforce 0");
+                mSelinux.setSummary(R.string.selinux_permissive_title);
             }
             return true;
         }
