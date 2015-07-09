@@ -37,6 +37,12 @@
             android:dependency="show_clear_all_recents" />
             
        <PreferenceScreen
+            android:key="recent_panel"
+            android:title="@string/recent_panel_slim"
+            android:summary="@string/recent_panel_slim_summary"
+            android:fragment="com.android.settings.slim.RecentPanel" />
+            
+       <PreferenceScreen
 			android:id="@+id/omniswitch"
 			android:title="@string/omniswitch_settings_title"
 			android:fragment="com.android.settings.candy.OmniSwitch" />
