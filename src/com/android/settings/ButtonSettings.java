@@ -201,11 +201,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             }
         }
 
-        if (mNavigationPreferencesCat.getPreferenceCount() == 0) {
-            // Hide navigation bar category
-            prefScreen.removePreference(mNavigationPreferencesCat);
-        }
-
         mCameraWakeScreen = (SwitchPreference) findPreference(Settings.System.CAMERA_WAKE_SCREEN);
         mCameraSleepOnRelease =
                 (SwitchPreference) findPreference(Settings.System.CAMERA_SLEEP_ON_RELEASE);
