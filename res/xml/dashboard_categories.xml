@@ -100,6 +100,14 @@
             android:id="@+id/device_section"
             android:title="@string/header_category_device" >
 
+        <!-- Candy interface -->
+        <dashboard-tile
+                android:id="@+id/main_settings"
+                android:title="@string/candy_settings_title"
+                android:fragment="com.android.settings.candy.MainSettings"
+                android:icon="@drawable/ic_candy_interface"
+                />
+
         <!-- Sound -->
         <dashboard-tile
                 android:id="@+id/sound_settings"
@@ -174,14 +182,6 @@
                 android:title="@string/home_settings"
                 android:fragment="com.android.settings.HomeSettings"
                 android:icon="@drawable/ic_settings_home"
-                />
-
-        <!-- Candy interface -->
-        <dashboard-tile
-                android:id="@+id/main_settings"
-                android:title="@string/candy_settings_title"
-                android:fragment="com.android.settings.candy.MainSettings"
-                android:icon="@drawable/ic_candy_interface"
                 />
 
         <!-- Themes -->
