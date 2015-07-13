@@ -97,6 +97,7 @@ import com.android.settings.notification.OtherSoundSettings;
 import com.android.settings.profiles.NFCProfileTagCallback;
 import com.android.settings.profiles.ProfilesSettings;
 import com.android.settings.quicklaunch.QuickLaunchSettings;
+import com.android.settings.candy.MainSettings;
 import com.android.settings.search.DynamicIndexableContentMonitor;
 import com.android.settings.search.Index;
 import com.android.settings.inputmethod.InputMethodAndLanguageSettings;
@@ -256,6 +257,7 @@ public class SettingsActivity extends Activity
             R.id.home_settings,
             R.id.status_bar_settings,
             R.id.dashboard,
+            R.id.main_settings,
             R.id.privacy_settings_cyanogenmod
     };
 
@@ -319,6 +321,7 @@ public class SettingsActivity extends Activity
             AppNotificationSettings.class.getName(),
             OtherSoundSettings.class.getName(),
             QuickLaunchSettings.class.getName(),
+            MainSettings.class.getName(),
             ApnSettings.class.getName(),
             BlacklistSettings.class.getName(),
             ProfilesSettings.class.getName(),
