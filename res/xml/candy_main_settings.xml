@@ -32,6 +32,11 @@
          android:title="@string/animations_settings">
     </PreferenceScreen>    
 
+    <PreferenceScreen
+        android:key="battery_bar"
+        android:fragment="com.android.settings.candy.BatteryBar"
+        android:title="@string/battery_bar" />
+
     <!-- Buttons -->  
       <PreferenceScreen
          android:id="@+id/button_settings"
