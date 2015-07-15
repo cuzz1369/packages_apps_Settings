@@ -1,4 +1,4 @@
-package com.android.settings.chameleonos;
+package com.android.settings.candy;
 
 import android.content.Context;
 import android.content.res.TypedArray;

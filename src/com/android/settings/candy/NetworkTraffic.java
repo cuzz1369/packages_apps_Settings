@@ -8,7 +8,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.simpleaosp;
+package com.android.settings.candy;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -30,7 +30,7 @@ import android.view.MenuItem;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.chameleonos.SeekBarPreference;
+import com.android.settings.candy.SeekBarPreference;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
