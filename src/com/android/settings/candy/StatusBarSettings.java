@@ -74,7 +74,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String PREF_COLOR_PICKER = "clock_color";
     private static final String PREF_FONT_STYLE = "font_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
-  
+    private static final String STATUS_BAR_TEMPERATURE_STYLE = "status_bar_temperature_style";
+
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
     public static final int CLOCK_DATE_STYLE_LOWERCASE = 1;
@@ -96,6 +97,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     
     private boolean mCheckPreferences;
     
+    private ListPreference mStatusBarTemperature;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -127,6 +130,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         mStatusBarDate = (ListPreference) findPreference(STATUS_BAR_DATE);
         mStatusBarDateStyle = (ListPreference) findPreference(STATUS_BAR_DATE_STYLE);
         mStatusBarDateFormat = (ListPreference) findPreference(STATUS_BAR_DATE_FORMAT);
+        mStatusBarTemperature = (ListPreference) findPreference(STATUS_BAR_TEMPERATURE_STYLE);
 
         int clockStyle = Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_CLOCK, 1);
@@ -202,6 +206,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         setHasOptionsMenu(true);
         mCheckPreferences = true;
         return prefSet;
+        int temperatureStyle = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, 0);
+        mStatusBarTemperature.setValue(String.valueOf(temperatureStyle));
+        mStatusBarTemperature.setSummary(mStatusBarTemperature.getEntry());
+        mStatusBarTemperature.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -325,6 +334,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_CLOCK_FONT_STYLE, val);
             mFontStyle.setSummary(mFontStyle.getEntries()[index]);
+            return true;
+        } else if (preference == mStatusBarTemperature) {
+            int temperatureStyle = Integer.valueOf((String) newValue);
+            int index = mStatusBarTemperature.findIndexOfValue((String) newValue);
+            Settings.System.putInt(
+                    resolver, Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, temperatureStyle);
+            mStatusBarTemperature.setSummary(
+                    mStatusBarTemperature.getEntries()[index]);
             return true;
         }
         return false;
