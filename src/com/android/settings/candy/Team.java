@@ -37,7 +37,6 @@ mMatthew0776 = prefSet.findPreference("candy_matthew0776");
 mMar5hal = prefSet.findPreference("candy_mar5hal");
 mCyberScopes = prefSet.findPreference("candy_CyberScopes");
 mGimmeitorilltell = prefSet.findPreference("candy_gimmeitorilltell");
-mBMP7777 = prefSet.findPreference("candy_BMP7777");
 mRc420head = prefSet.findPreference("candy_rc420head");
 mFlashalot = prefSet.findPreference("candy_flashalot");
 mVenomtester = prefSet.findPreference("candy_venomtester");
@@ -72,9 +71,6 @@ Toast.makeText(getActivity(), "Themer for CandyRoms, Part Time Slave To School",
 Toast.LENGTH_LONG).show();
 } else if (preference == mGimmeitorilltell) {
 Toast.makeText(getActivity(), "ROM Mantainer for CandyRoms, Keywords: Dammit Bobby",
-Toast.LENGTH_LONG).show();
-} else if (preference == mBMP7777) {
-Toast.makeText(getActivity(), "ROM Mantainer for CandyRoms, LOVES The Sprint Samsung Galaxay Tab 3 7.0",
 Toast.LENGTH_LONG).show();
 } else if (preference == mRc420head) {
 Toast.makeText(getActivity(), "ROM Mantainer for CandyRoms, Did Someone Say Pot?!?!",
