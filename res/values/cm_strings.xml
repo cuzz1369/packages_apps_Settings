@@ -1131,8 +1131,10 @@
     <string name="category_interface">Interface</string>
     <string name="category_calibration">Calibration</string>
     <string name="display_and_lights">Display &amp; lights</string>
-    <string name="notification_manager">Notifications</string>
+    <string name="notification_alert_manager">Alerts</string>
     <string name="lockscreen_settings">Lock screen</string>
+    <string name="title_lockscreen_settings">Lockscreen settings</string>
+    <string name="summary_lockscreen_settings">Custom security and application settings</string>
     <string name="category_lights">Lights</string>
     <string name="power_usage_history_title">Battery usage</string>
 

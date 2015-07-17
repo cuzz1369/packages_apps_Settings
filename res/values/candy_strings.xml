@@ -269,8 +269,23 @@
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
     <string name="shortcuts_icon_picker_unlock">Unlock</string>
 
-    <!-- Lockscreen Shortcuts -->
-    <string name="lockscreen_shortcuts_title">Lockscreen Shortcuts</string>
+    <!-- Candy Interface Summaries -->
+    <string name="summary_animation_settings">System wide ui animations</string>
+    <string name="summary_app_circle_sidebar">Configurable sidebar of applications</string>
+    <string name="summary_battery_bar">Displays battery percentage onscreen</string>
+    <string name="summary_gesture_anywhere">Configurable screen gestures for launching applications and settings</string>
+    <string name="summary_heads_up">Control heads up notification settings</string>
+    <string name="summary_hfm">Update hosts to block ads</string>
+    <string name="summary_lockscreen_settings">Configure various lockscreen functions</string>
+    <string name="summary_recents_panel">Customize recent panel options (ie. clear all, search bar etc)</string>
+    <string name="summary_button_settings">Customize Hardware Buttons</string>
+    <string name="summary_status_bar">Misc statusbar options (ie. battery, clock, brightness etc)</string>
+    <string name="summary_alert_notification_manager">Application and system wide notification settings</string>
+    <string name="summary_notification_drawer">Configure notification bar options and quick settings</string>
+
+    <!-- Lockscreen shortcut picker -->
+    <string name="lockscreen_shortcuts_title">Pinned apps</string>
+    <string name="summary_lockscreen_shortcuts">Pin applications to launch from the lockscreen</string>
     <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
     <string name="lockscreen_shorcuts_launch_type_title">Lockscreen Shortcut click type</string>
     <string name="lockscreen_shortcuts_single_tap">Click</string>
@@ -299,6 +314,7 @@
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
     <!-- Heads Up -->
+    <string name="title_heads_up">Heads up</string>
     <string name="category_heads_up">Heads up notifications</string>
     <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
     <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
@@ -453,6 +469,7 @@
     <string name="battery_bar_style_title">Battery bar style</string>
     <string name="battery_bar_thickness_title">Battery bar thickness</string>
     <string name="battery_bar_animate_title">Charging animation</string>
+    <string name="battery_bar_setings_title">Battery bar settings</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
     
     <!-- QuickSettings: Smart Pulldown -->
@@ -614,5 +631,5 @@
     <string name="pocket_only_mode">Pocket</string>
     <string name="shake_pulse_mode">Shake and pulse</string>
     <string name="pulse_only_mode">Pulse (default)</string>
-
+    
 </resources>
