@@ -274,8 +274,8 @@
     <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
     <string name="lockscreen_shorcuts_launch_type_title">Lockscreen Shortcut click type</string>
     <string name="lockscreen_shortcuts_single_tap">Click</string>
-    <string name="lockscreen_shortcuts_double_tap">Longpress</string>
-    <string name="lockscreen_shortcuts_longpress">Double tap</string>
+    <string name="lockscreen_shortcuts_double_tap">Double tap</string>
+    <string name="lockscreen_shortcuts_longpress">Longpress</string>
 
     <!-- Double tap gesture anywhere on the lock screen put device to sleep -->
     <string name="double_tap_sleep_anywhere_title">Double-tap to sleep anywhere</string>
