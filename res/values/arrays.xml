@@ -40,7 +40,7 @@
     </string-array>
 
     <!-- Display settings.  The delay in inactivity before the screen is turned off. These are shown in a list dialog. -->
-    <string-array name="screen_timeout_entries">
+    <string-array name="screen_timeout_entries" translatable="false">
         <item>15 seconds</item>
         <item>30 seconds</item>
         <item>45 seconds</item>
@@ -72,7 +72,7 @@
     </string-array>
 
     <!-- Display settings.  The delay in inactivity before the dream is shown. These are shown in a list dialog. -->
-    <string-array name="dream_timeout_entries">
+    <string-array name="dream_timeout_entries" translatable="false">
         <item>Never</item>
         <item>15 seconds</item>
         <item>30 seconds</item>
@@ -108,7 +108,7 @@
 
     <!-- Security settings.  The delay after screen is turned off until device locks.
          These are shown in a list dialog. -->
-    <string-array name="lock_after_timeout_entries">
+    <string-array name="lock_after_timeout_entries" translatable="false">
         <item>Immediately</item>
         <item>5 seconds</item>
         <item>15 seconds</item>
@@ -935,7 +935,7 @@
     </string-array>
 
     <!-- Titles for window animation scale preference. [CHAR LIMIT=35] -->
-    <string-array name="window_animation_scale_entries">
+    <string-array name="window_animation_scale_entries" translatable="false">
         <item>Animation off</item>
 	<item>Animation scale .25x</item>
         <item>Animation scale .5x</item>
@@ -961,7 +961,7 @@
     </string-array>
 
     <!-- Titles for transition animation scale preference. [CHAR LIMIT=35] -->
-    <string-array name="transition_animation_scale_entries">
+    <string-array name="transition_animation_scale_entries" translatable="false">
         <item>Animation off</item>
 	<item>Animation scale .25x</item>
         <item>Animation scale .5x</item>
@@ -987,7 +987,7 @@
     </string-array>
 
     <!-- Titles for animator duration scale preference. [CHAR LIMIT=35] -->
-    <string-array name="animator_duration_scale_entries">
+    <string-array name="animator_duration_scale_entries" translatable="false">
         <item>Animation off</item>
 	<item>Animation scale .25x</item>
         <item>Animation scale .5x</item>
