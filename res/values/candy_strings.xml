@@ -282,7 +282,7 @@
     <string name="summary_status_bar">Misc statusbar options (ie. battery, clock, brightness etc)</string>
     <string name="summary_alert_notification_manager">Application and system wide notification settings</string>
     <string name="summary_notification_drawer">Configure notification bar options and quick settings</string>
-
+    <string name="summary_navigation_bar">Choose and configure Navbar and NX Geastures</string>
     <!-- Lockscreen shortcut picker -->
     <string name="lockscreen_shortcuts_title">Pinned apps</string>
     <string name="summary_lockscreen_shortcuts">Pin applications to launch from the lockscreen</string>
