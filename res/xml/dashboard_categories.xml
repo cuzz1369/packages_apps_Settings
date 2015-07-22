@@ -200,7 +200,7 @@
                 android:title="@string/profiles_settings_title"
                 android:icon="@drawable/ic_settings_profiles"
                 />
-      
+
         <!-- Application Settings -->
         <dashboard-tile
                 android:id="@+id/application_settings"

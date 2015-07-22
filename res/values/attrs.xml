@@ -133,4 +133,9 @@
         <attr name="netUnitsRight" format="string" />
     </declare-styleable>
 
+    <!-- custom attributes for custom preferences -->
+    <declare-styleable name="EosPrefs">
+        <attr name="observedUri" format="reference" />
+        <attr name="defaultVal" format="reference" />
+    </declare-styleable>
 </resources>

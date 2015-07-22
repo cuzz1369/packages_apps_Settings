@@ -19,7 +19,13 @@ package com.android.settings.cyanogenmod;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.android.settings.ButtonSettings;
+/*import android.content.SharedPreferences;
+import android.os.PowerManager;
+import android.os.SystemProperties;
+import android.preference.PreferenceManager;
+import android.util.Log;
+*/
+import com.android.settings.eos.ButtonSettings;
 import com.android.settings.DisplaySettings;
 import com.android.settings.hardware.VibratorIntensity;
 import com.android.settings.inputmethod.InputMethodAndLanguageSettings;
