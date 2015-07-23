@@ -643,4 +643,7 @@
     <!-- Quick settings -->
     <string name="qs_tiles_vibrate_title">Vibrate on touch</string>
 
+    <!-- Kernel Adiutor -->
+    <string name="kernel_adiutor_title">Kernel Adiutor</string>
+
 </resources>

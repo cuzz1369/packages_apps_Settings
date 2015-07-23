@@ -2360,6 +2360,8 @@
         <activity android:name=".candy.gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".candy.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
+        <!-- Kernel Adiutor -->
+        <activity android:name="com.grarak.kerneladiutor.MainActivity"/>
 
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
