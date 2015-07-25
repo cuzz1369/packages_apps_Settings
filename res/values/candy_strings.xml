@@ -283,6 +283,7 @@
     <string name="summary_alert_notification_manager">Application and system wide notification settings</string>
     <string name="summary_notification_drawer">Configure notification bar options and quick settings</string>
     <string name="summary_navigation_bar">Choose and configure Navbar and NX Geastures</string>
+    <string name="summary_screen_off_gestures">configure screen off gestures</string>
     <!-- Lockscreen shortcut picker -->
     <string name="lockscreen_shortcuts_title">Pinned apps</string>
     <string name="summary_lockscreen_shortcuts">Pin applications to launch from the lockscreen</string>
