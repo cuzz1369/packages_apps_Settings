@@ -26,6 +26,7 @@ Preference mjavelinanddart;
 Preference mcalebcabob;
 Preference mtimmytim;
 Preference mp70shooter;
+Preference mNoSpamDan;
 @Override
 public void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ mjavelinanddart = prefSet.findPreference("candy_javelinanddart");
 mcalebcabob = prefSet.findPreference("candy_calebcabob");
 mtimmytim = prefSet.findPreference("candy_timmytim");
 mp70shooter = prefSet.findPreference("candy_p70shooter");
+mNoSpamDan = prefSet.findPreference("candy_NoSpamDan");
 }
 @Override
 public void onResume() {
@@ -61,10 +63,10 @@ public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preferen
 ContentResolver resolver = getActivity().getContentResolver();
 boolean value;
 if (preference == mMatthew0776) {
-Toast.makeText(getActivity(), "Co-Owner Of CandyRoms, Loves Making Icon Packs With Eclipse",
+Toast.makeText(getActivity(), "Co-Owner Of CandyRoms, Gimme all yo candy b*tches, Asian with a white boy name",
 Toast.LENGTH_LONG).show();
 } else if (preference == mMar5hal) {
-Toast.makeText(getActivity(), "Co-Owner Of CandyRoms, Gimme all yo candy b*tches, Asian with a white boy name)",
+Toast.makeText(getActivity(), "Co-Owner Of CandyRoms, Much cool such dev wow :)",
 Toast.LENGTH_LONG).show();
 } else if (preference == mCyberScopes) {
 Toast.makeText(getActivity(), "Themer for CandyRoms, Part Time Slave To School",
@@ -91,7 +93,7 @@ Toast.LENGTH_LONG).show();
 Toast.makeText(getActivity(), "Master Tester for CandyRoms, You forgot something @Rc420head",
 Toast.LENGTH_LONG).show();
 } else if (preference == mjavelinanddart) {
-Toast.makeText(getActivity(), "ROM Maintainer for CandyRoms, Known for loving shi*** devices",
+Toast.makeText(getActivity(), "Device Maintainer Team Lead",
 Toast.LENGTH_LONG).show();
 } else if (preference == mcalebcabob) {
 Toast.makeText(getActivity(), "Git Commit Search Engine aka DJ aka Tester for CandyRoms",
@@ -101,6 +103,9 @@ Toast.makeText(getActivity(), "ROM Builder, If I was a Ninja Turtle...I would be
 Toast.LENGTH_LONG).show();
 } else if (preference == mp70shooter) {
 Toast.makeText(getActivity(), "Deals with the noobs so we don't have to",
+Toast.LENGTH_LONG).show();
+} else if (preference == mNoSpamDan) {
+Toast.makeText(getActivity(), "ROM Mantainer for CandyRoms, MANTRA: Release the meteor!",
 Toast.LENGTH_LONG).show();
 } else {
 return super.onPreferenceTreeClick(preferenceScreen, preference);
