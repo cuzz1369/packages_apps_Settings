@@ -648,4 +648,16 @@
     <!-- Kernel Adiutor -->
     <string name="kernel_adiutor_title">Kernel Adiutor</string>
 
+     <!-- Status bar temperature -->
+    <string name="status_bar_temperature_title">Temperature</string>
+    <string name="status_bar_temperature_hidden">Hidden</string>
+    <string name="status_bar_temperature_show_scale">Shown with scale</string>
+    <string name="status_bar_temperature_hide_scale">Shown without scale</string>
+    <string name="status_bar_temperature_location_title">Placement</string>
+    <string name="status_bar_temperature_location_summary">Select where the weather temperature is shown on the statusbar</string>
+    <string name="status_bar_temperature_location_right">Show on right</string>
+    <string name="status_bar_temperature_location_left">Show on left</string>
+    <string name="status_bar_weather_color_title">Temperature color</string>
+    <string name="status_bar_weather_size_title">Font size</string>
+
 </resources>
