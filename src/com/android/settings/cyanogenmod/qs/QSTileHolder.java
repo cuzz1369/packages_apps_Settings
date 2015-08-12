@@ -176,6 +176,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_media_play";
                 stringId = R.string.qs_music_play_tile;
                 break;
+            case QSConstants.TILE_SCREENSHOT:
+                resourceName = "ic_qs_screenshot";
+                stringId = R.string.qs_screenshot_tile;
+                break;
 
             // Dynamic tiles
             case QSConstants.DYNAMIC_TILE_NEXT_ALARM:
