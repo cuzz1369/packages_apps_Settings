@@ -1004,6 +1004,7 @@
     <string name="qs_tile_nfc">NFC</string>
     <string name="qs_tile_performance">Battery mode</string>
     <string name="qs_tile_profiles">System profiles</string>
+    <string name="qs_tile_volume_panel">Volume panel</string>
     <string name="qs_tile_screen_timeout">Screen timeout</string>
     <string name="qs_tile_sync">Sync</string>
     <string name="qs_tile_usb_tether">USB tethering</string>
