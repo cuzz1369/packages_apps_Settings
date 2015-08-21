@@ -27,7 +27,6 @@ import com.android.settings.cyanogenmod.BaseSystemSettingSwitchBar;
 import com.android.settings.widget.SwitchBar;
 
 import android.content.Context;
-import android.hardware.CmHardwareManager;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -40,6 +39,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import cyanogenmod.hardware.CMHardwareManager;
 
 public class NavigationSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, BaseSystemSettingSwitchBar.SwitchBarChangeCallback {
@@ -65,6 +66,8 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.navigation_settings);
 
+        final Context context = (Context) getActivity();
+        
         // only show switch bar to enable navigation bar on hardware key devices
         mHasHardwareKeys = ActionUtils.isCapKeyDevice(getActivity());
 
@@ -88,8 +91,8 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
             mNavigationBarLeftPref = null;
         }
     }
-
-    @Override
+     
+     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         // build navigation settings disabled container for hardware key devices
@@ -104,20 +107,16 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
         StringBuilder builder = new StringBuilder();
         builder.append(getString(R.string.force_navbar_disabled_notice));
 
-        CmHardwareManager cmHardwareManager =
-                (CmHardwareManager) getSystemService(Context.CMHW_SERVICE);
-        boolean hasKeyDisabler = cmHardwareManager
-                .isSupported(CmHardwareManager.FEATURE_KEY_DISABLE);
-        builder.append(" ").append(getString(hasKeyDisabler
-                ? R.string.force_navbar_key_disable_supported
-                : R.string.force_navbar_key_disable_unsupported));
-        mDisabledText.setText(builder.toString());
+        CMHardwareManager hardware = CMHardwareManager.getInstance(mContext);
+        CMHardwareManager hasKeyDisabler = CMHardwareManager.getInstance(mContext);
+        if (!hardware.isSupported(CMHardwareManager.FEATURE_KEY_DISABLE));
+        
 
         View prefs = super.onCreateView(inflater, mPrefsContainer, savedInstanceState);
         mPrefsContainer.addView(prefs);
         return v;
     }
-
+    
     @Override
     public void onStart() {
         super.onStart();

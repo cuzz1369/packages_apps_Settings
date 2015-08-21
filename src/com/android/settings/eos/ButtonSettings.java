@@ -21,7 +21,6 @@ import com.android.internal.util.actions.ActionUtils;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.hardware.CmHardwareManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.preference.ListPreference;
@@ -38,6 +37,8 @@ import com.android.internal.util.cm.ScreenType;
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.cyanogenmod.ButtonBacklightBrightness;
+
+import cyanogenmod.hardware.CMHardwareManager;
 
 public class ButtonSettings extends ActionFragment implements
         Preference.OnPreferenceChangeListener {
@@ -353,9 +354,8 @@ public class ButtonSettings extends ActionFragment implements
 
     // called from boot receiver, UserChangedReceiver, and NavigatonSettings
     public static void restoreKeyDisabler(Context context) {
-        CmHardwareManager cmHardwareManager =
-                (CmHardwareManager) context.getSystemService(Context.CMHW_SERVICE);
-        if (!cmHardwareManager.isSupported(CmHardwareManager.FEATURE_KEY_DISABLE)) {
+           CMHardwareManager hardware = CMHardwareManager.getInstance(context);
+        if (hardware.isSupported(CMHardwareManager.FEATURE_KEY_DISABLE)) {
             return;
         }
         // key disabler is supported, set or restore state based on navbar showing
@@ -377,10 +377,8 @@ public class ButtonSettings extends ActionFragment implements
         final int defaultBrightness = context.getResources().getInteger(
                 com.android.internal.R.integer.config_buttonBrightnessSettingDefault);
 
-        CmHardwareManager cmHardwareManager =
-                (CmHardwareManager) context.getSystemService(Context.CMHW_SERVICE);
-        cmHardwareManager.set(CmHardwareManager.FEATURE_KEY_DISABLE, enabled);
-
+        CMHardwareManager hardware = CMHardwareManager.getInstance(context);
+        hardware.set(CMHardwareManager.FEATURE_KEY_DISABLE, enabled);
         SharedPreferences.Editor editor = prefs.edit();
 
         if (enabled) {
