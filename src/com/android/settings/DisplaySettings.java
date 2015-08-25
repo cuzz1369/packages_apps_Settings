@@ -517,12 +517,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mLiftToWakePreference.setChecked(value != 0);
         }
 
-        // Update doze if it is available.
-        if (mDozePreference != null) {
-            int value = Settings.Secure.getInt(getContentResolver(), DOZE_ENABLED, 1);
-            mDozePreference.setChecked(value != 0);
-        }
-
         // Update proximity wake if it is available.
         if (mProximityWakePreference != null) {
             boolean defaultValue = getResources().getBoolean(
@@ -672,10 +666,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mLiftToWakePreference) {
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), WAKE_GESTURE_ENABLED, value ? 1 : 0);
-        }
-        if (preference == mDozePreference) {
-            boolean value = (Boolean) objValue;
-            Settings.Secure.putInt(getContentResolver(), DOZE_ENABLED, value ? 1 : 0);
         }
         if (preference == mProximityWakePreference) {
             boolean value = (Boolean) objValue;
