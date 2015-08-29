@@ -92,6 +92,7 @@ public class ActionListViewSettings extends ListFragment implements
     private static final int LOCKSCREEN_SHORTCUT   = 4;
     private static final int POWER_MENU_SHORTCUT   = 5;
     private static final int SHAKE_EVENTS_DISABLED = 6;
+    private static final int RECENT_APP_SIDEBAR    = 7;
 
     private static final int DEFAULT_MAX_ACTION_NUMBER = 5;
 
@@ -520,6 +521,9 @@ public class ActionListViewSettings extends ListFragment implements
         switch (mActionMode) {
             case LOCKSCREEN_SHORTCUT:
                 return ActionHelper.getLockscreenShortcutConfig(mActivity);
+            case RECENT_APP_SIDEBAR:
+                return ActionHelper.getRecentAppSidebarConfigWithDescription(
+                    mActivity, mActionValuesKey, mActionEntriesKey);
 /* Disabled for now till all features are back. Enable it step per step!!!!!!
             case NAV_BAR:
                 return ActionHelper.getNavBarConfigWithDescription(
@@ -547,6 +551,10 @@ public class ActionListViewSettings extends ListFragment implements
         switch (mActionMode) {
             case LOCKSCREEN_SHORTCUT:
                 ActionHelper.setLockscreenShortcutConfig(mActivity, actionConfigs, reset);
+                break;
+                
+            case RECENT_APP_SIDEBAR:
+                ActionHelper.setRecentAppSidebarConfig(mActivity, actionConfigs, reset);
                 break;
 /* Disabled for now till all features are back. Enable it step per step!!!!!!
             case NAV_BAR:
@@ -613,7 +621,6 @@ public class ActionListViewSettings extends ListFragment implements
             }
             if (mActionMode == POWER_MENU_SHORTCUT) {
 /* Disabled for now till slims power menu is back!!!!!!!!!!!!!!
-
                 holder.iconView.setImageDrawable(ImageHelper.resize(
                         mActivity, PolicyHelper.getPowerMenuIconImage(mActivity,
                         getItem(position).getClickAction(),
@@ -726,6 +733,7 @@ public class ActionListViewSettings extends ListFragment implements
                         case NAV_RING:
                         case PIE:
                         case PIE_SECOND:
+                        case RECENT_APP_SIDEBAR:
                         default:
                             actionMode = res.getString(R.string.shortcut_action_help_button);
                             break;
