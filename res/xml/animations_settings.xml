@@ -44,4 +44,9 @@
         android:summary="@string/aokp_animation_summary"
         android:fragment="com.android.settings.candy.AnimationControls" />
 
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="toast_icon"
+        android:title="@string/toast_icon_title"
+        android:defaultValue="true" />
+
 </PreferenceScreen>

@@ -663,5 +663,8 @@
     <!-- Lockscreen wallpaper -->
     <string name="lockscreen_wallpaper_title">Wallpaper</string>
     <string name="lockscreen_wallpaper_summary">Set lockscreen wallpaper</string>
+    
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Toast icon</string>
 
 </resources>
