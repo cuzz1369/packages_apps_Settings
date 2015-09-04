@@ -107,10 +107,13 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
         StringBuilder builder = new StringBuilder();
         builder.append(getString(R.string.force_navbar_disabled_notice));
 
-        CMHardwareManager hardware = CMHardwareManager.getInstance(mContext);
-        CMHardwareManager hasKeyDisabler = CMHardwareManager.getInstance(mContext);
-        if (!hardware.isSupported(CMHardwareManager.FEATURE_KEY_DISABLE));
-        
+        final Context context = (Context) getActivity();
+        final CMHardwareManager hardware = CMHardwareManager.getInstance(context);
+        boolean hasKeyDisabler = hardware.isSupported(CMHardwareManager.FEATURE_KEY_DISABLE);
+        builder.append(" ").append(getString(hasKeyDisabler
+                ? R.string.force_navbar_key_disable_supported
+                : R.string.force_navbar_key_disable_unsupported));
+        mDisabledText.setText(builder.toString());
 
         View prefs = super.onCreateView(inflater, mPrefsContainer, savedInstanceState);
         mPrefsContainer.addView(prefs);
