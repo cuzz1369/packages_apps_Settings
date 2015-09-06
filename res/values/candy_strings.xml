@@ -669,8 +669,8 @@
 
     <!-- Floating/Multi Window -->
     <string name="qs_tile_slim_floats">Slim Floats</string>
-    <string name="slim_action_floats">Slim Actions and Pie</string>
-    <string name="slim_action_floats_summary">Launch Slim and Pie Actions in Floating Window Mode</string>
+    <string name="slim_action_floats">Slim Actions</string>
+    <string name="slim_action_floats_summary">Launch Slim Actions in Floating Window Mode</string>
     
     <!-- Recent app sidebar -->
     <string name="recent_app_sidebar_title">App sidebar</string>
