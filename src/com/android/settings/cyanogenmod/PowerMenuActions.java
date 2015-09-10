@@ -49,6 +49,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     
     private static final String SCREENSHOT_DELAY = "screenshot_delay";
 
+    private static final String POWER_MENU_ONTHEGO_ENABLED = "power_menu_onthego_enabled";
+
     private CheckBoxPreference mRebootPref;
     private CheckBoxPreference mScreenshotPref;
     private CheckBoxPreference mScreenrecordPref;
@@ -58,6 +60,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private CheckBoxPreference mLockdownPref;
     private CheckBoxPreference mBugReportPref;
     private CheckBoxPreference mSilentPref;
+    private CheckBoxPreference mOnTheGoPowerMenu;
 
 
     Context mContext;
@@ -79,6 +82,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.power_menu_settings);
         mContext = getActivity().getApplicationContext();
+        
+        final ContentResolver resolver = getActivity().getContentResolver();
 
         mPrefSet = getPreferenceScreen();
 
@@ -87,6 +92,11 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         mAvailableActions = getActivity().getResources().getStringArray(
                 R.array.power_menu_actions_array);
         mAllActions = PowerMenuConstants.getAllActions();
+        
+        mOnTheGoPowerMenu = (CheckBoxPreference) findPreference(POWER_MENU_ONTHEGO_ENABLED);
+        mOnTheGoPowerMenu.setChecked(Settings.System.getInt(resolver,
+                Settings.System.POWER_MENU_ONTHEGO_ENABLED, 0) == 1);
+        mOnTheGoPowerMenu.setOnPreferenceChangeListener(this);
 
         for (String action : mAllActions) {
         // Remove preferences not present in the overlay
@@ -179,6 +189,22 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         updatePreferences();
     }
 
+     @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mOnTheGoPowerMenu) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver, Settings.System.POWER_MENU_ONTHEGO_ENABLED, value ? 1 : 0);
+            return true;
+        } else if (preference == mScreenshotDelay) {
+            int value = Integer.parseInt(newValue.toString());
+            Settings.System.putInt(mCr, Settings.System.SCREENSHOT_DELAY,
+                    value);
+            return true;
+        }
+        return false;
+    }
+    
     @Override
     public void onResume() {
         super.onResume();
@@ -231,16 +257,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment
         return true;
     }
 
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mScreenshotDelay) {
-            int value = Integer.parseInt(newValue.toString());
-            Settings.System.putInt(mCr, Settings.System.SCREENSHOT_DELAY,
-                    value);
-            return true;
-        }
-        return false;
-    }
 
     private boolean settingsArrayContains(String preference) {
         return mLocalUserConfig.contains(preference);
