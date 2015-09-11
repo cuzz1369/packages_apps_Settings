@@ -1924,8 +1924,14 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         } else if (dialog == mEnableDialog) {
             if (!mDialogClicked) {
                 mSwitchBar.setChecked(false);
-            }
             mEnableDialog = null;
+		   }
+        } else if (dialog == mUpdateRecoveryDialog) {
+            updateUpdateRecoveryOptions();
+            mUpdateRecoveryDialog = null;
+        } else if (dialog == mRootDialog) {
+            updateRootAccessOptions();
+            mRootDialog = null;
         }
     }
 
