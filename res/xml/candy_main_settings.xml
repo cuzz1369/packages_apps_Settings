@@ -57,13 +57,6 @@
         android:title="@string/button_pref_title"
         android:summary="@string/summary_button_settings"
         android:fragment="com.android.settings.eos.ButtonSettings"/>
-        
-    <!-- Navigation bar -->
-     <PreferenceScreen
-        android:id="@+id/navigation_bar_settings"
-        android:title="@string/navigationbar_settings_title"
-        android:summary="@string/summary_navigation_bar"
-        android:fragment="com.android.settings.eos.NavigationSettings"/>
 
     <!-- Gesture anywhere -->
     <PreferenceScreen
@@ -72,14 +65,20 @@
         android:title="@string/gesture_anywhere_title"
         android:summary="@string/summary_gesture_anywhere"/>
     
-	<!-- Heads up -->
+    <!-- Heads up -->
     <PreferenceScreen
         android:key="heads_up_enabled"
         android:title="@string/title_heads_up"
         android:summary="@string/summary_heads_up"
         android:fragment="com.android.settings.candy.HeadsUpSettings" />
 
-           
+    <!-- Navigation bar -->
+    <PreferenceScreen
+        android:id="@+id/navigation_bar_settings"
+        android:title="@string/navigationbar_settings_title"
+        android:summary="@string/summary_navigation_bar"
+        android:fragment="com.android.settings.eos.NavigationSettings"/>
+     
     <!-- Notification drawer -->
     <PreferenceScreen
         android:id="@+id/notification_drawer_settings"
