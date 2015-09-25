@@ -164,6 +164,7 @@ public class QSTileHolder {
                 resourceName = "ic_qs_sync_on";
                 stringId = R.string.qs_tile_sync;
                 break;
+<<<<<<< HEAD
             case QSConstants.TILE_CANDY:
 		resourceName = "ic_qs_candy_on";
 		stringId = R.string.qs_tile_candy;
@@ -187,9 +188,11 @@ public class QSTileHolder {
             case QSConstants.TILE_SLIM_FLOATS:
                 resourceName = "ic_qs_floating_on";
                 stringId = R.string.qs_tile_slim_floats;
+=======
             case QSConstants.TILE_BATTERY_SAVER:
                 resourceName = "ic_qs_battery_saver_on";
                 stringId = R.string.qs_tile_battery_saver;
+>>>>>>> 77e4f7c... Settings: Add battery saver tile (2/2)
                 break;
 
             // Dynamic tiles
