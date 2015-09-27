@@ -35,7 +35,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
@@ -47,7 +46,6 @@ import android.os.UserManager;
 import android.preference.SwitchPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceCategory;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
@@ -106,8 +104,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String EXTRA_LOGIN_FOR_KILL_SWITCH = "authCks";
     private static final String EXTRA_CKSOP = "cksOp";
     private static final int LOCK_REQUEST = 57;
-    private static final String KEY_LOCKSCREEN_CATEGORY = "lockscreen_category";
-    private static final String KEY_LOCKSCREEN_WALLPAPER = "lockscreen_wallpaper";
 
     private SwitchPreference mLockDeviceToCyanogenAccount;
 
@@ -306,21 +302,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 deviceAdminCategory.removePreference(appOpsSummary);
             }
         }
- 
-        // Lockscreen wallpaper
-        PreferenceCategory lockscreenCategory = (PreferenceCategory)
-            root.findPreference(KEY_LOCKSCREEN_CATEGORY);
-        if (lockscreenCategory != null) {
-            PreferenceScreen lockscreenWallpaper = (PreferenceScreen)
-                lockscreenCategory.findPreference(KEY_LOCKSCREEN_WALLPAPER);
-            if (lockscreenWallpaper != null) {
-                try {
-                    getActivity().getPackageManager().getPackageInfo("com.slim.wallpaperpicker", 0);
-                } catch (PackageManager.NameNotFoundException e) {
-                    lockscreenCategory.removePreference(lockscreenWallpaper);
-                }
-            }
-         }
 
         // The above preferences come and go based on security state, so we need to update
         // the index. This call is expected to be fairly cheap, but we may want to do something

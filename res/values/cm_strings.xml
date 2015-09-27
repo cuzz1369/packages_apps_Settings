@@ -1392,4 +1392,11 @@
 
     <string name="quick_settings_reset_message">Reset quick settings tiles?</string>
 
+    <!-- Lockscreen see through/blur -->
+    <string name="lockscreen_see_through_title">See through</string>
+    <string name="lockscreen_see_through_summary">Shows the content behind your lockscreen, your data may be visible to those around you</string>
+    <string name="lockscreen_see_through_title">Lockscreen Blur</string>
+    <string name="lockscreen_see_through_summary">Blurs and displays the content behind your lockscreen. Your data may be visible to those around you</string>
+    <string name="lockscreen_blur_radius">Blur effect intensity</string>
+
 </resources>

@@ -46,6 +46,7 @@ import com.android.settings.R;
 import com.android.settings.SecuritySettings;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.TrustAgentUtils;
+import com.android.settings.candy.SeekBarPreference;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Index;
 import com.android.settings.search.Indexable;
@@ -79,6 +80,8 @@ public class LockScreenSettings extends SettingsPreferenceFragment
     private static final String KEY_MANAGE_TRUST_AGENTS = "manage_trust_agents";
     private static final String KEY_SHOW_VISUALIZER = "lockscreen_visualizer";
     private static final String KEY_MANAGE_FINGERPRINTS = "manage_fingerprints";
+    private static final String KEY_SEE_THROUGH = "lockscreen_see_through";
+    private static final String KEY_BLUR_RADIUS = "lockscreen_blur_radius";
 
     private static final int SET_OR_CHANGE_LOCK_METHOD_REQUEST = 123;
     private static final int CONFIRM_EXISTING_FOR_BIOMETRIC_WEAK_IMPROVE_REQUEST = 124;
@@ -102,6 +105,8 @@ public class LockScreenSettings extends SettingsPreferenceFragment
     private SwitchPreference mDirectlyShow;
     private SwitchPreference mVisibleDots;
     private SwitchPreference mPowerButtonInstantlyLocks;
+
+    private SeekBarPreference mBlurRadius;
 
     private DevicePolicyManager mDPM;
 
@@ -280,6 +285,16 @@ public class LockScreenSettings extends SettingsPreferenceFragment
             final Preference pref = findPreference(SWITCH_PREFERENCE_KEYS[i]);
             if (pref != null) pref.setOnPreferenceChangeListener(this);
         }
+
+        SwitchPreference seeThrough = (SwitchPreference) findPreference(KEY_SEE_THROUGH);
+        seeThrough.setOnPreferenceChangeListener(this);
+
+        mBlurRadius = (SeekBarPreference) findPreference(KEY_BLUR_RADIUS);
+        mBlurRadius.setEnabled(Settings.System.getBoolean(getContentResolver(),
+                Settings.System.LOCKSCREEN_SEE_THROUGH, false));
+        mBlurRadius.setValue(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_BLUR_RADIUS, 14));
+        mBlurRadius.setOnPreferenceChangeListener(this);
     }
 
     private String getActiveTrustAgentTitle() {
@@ -486,6 +501,11 @@ public class LockScreenSettings extends SettingsPreferenceFragment
             }
         } else if (KEY_POWER_INSTANTLY_LOCKS.equals(key)) {
             mLockPatternUtils.setPowerButtonInstantlyLocks((Boolean) value);
+        } else if (KEY_SEE_THROUGH.equals(key)) {
+            mBlurRadius.setEnabled((Boolean) value);
+        } else if (KEY_BLUR_RADIUS.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_BLUR_RADIUS, (Integer) value);
         }
         return result;
     }

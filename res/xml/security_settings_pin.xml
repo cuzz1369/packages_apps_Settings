@@ -86,12 +86,9 @@
         <PreferenceScreen
             android:key="lockscreen_wallpaper"
             android:title="@string/lockscreen_wallpaper_title"
-            android:summary="@string/lockscreen_wallpaper_summary">
-            <intent
-                android:targetPackage="com.slim.wallpaperpicker"
-                android:targetClass="com.slim.wallpaperpicker.WallpaperPickerActivity">
-                    <extra android:name="keyguardMode" android:value="true" />
-            </intent>
+            android:summary="@string/lockscreen_wallpaper_summary"
+            android:persistent="false"
+            android:fragment="com.android.settings.candy.LockscreenWallpaper">
         </PreferenceScreen>
  
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
@@ -99,6 +96,20 @@
             android:title="@string/lockscreen_visualizer_title"
             android:defaultValue="true"
             settings:advanced="true"/>
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="lockscreen_see_through"
+            android:title="@string/lockscreen_see_through_title"
+            android:summary="@string/lockscreen_see_through_summary"
+            android:defaultValue="false"
+            settings:advanced="true"/>
+
+	<com.android.settings.candy.SeekBarPreference
+            android:key="lockscreen_blur_radius"
+            android:title="@string/lockscreen_blur_radius"
+            android:max="25"
+            settings:minSeekBar="0"
+            android:defaultValue="14" />
 
         <PreferenceScreen
             android:key="lock_screen_weather_settings"

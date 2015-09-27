@@ -123,6 +123,7 @@
     </declare-styleable>
 
     <declare-styleable name="SeekBarPreference">
+        <attr name="defaultVal" format="integer" />
         <attr name="maximum" format="integer" />
         <attr name="minimum" format="integer" />
         <attr name="unitsLeft" format="string" />
@@ -137,5 +138,6 @@
     <declare-styleable name="EosPrefs">
         <attr name="observedUri" format="reference" />
         <attr name="defaultVal" format="reference" />
+        <attr name="minSeekBar" format="integer" />
     </declare-styleable>
 </resources>
