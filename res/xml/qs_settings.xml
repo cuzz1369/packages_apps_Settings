@@ -11,7 +11,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/qs_settings_title">   
 
     <PreferenceCategory
@@ -49,7 +51,15 @@
         <SwitchPreference
             android:key="block_on_secure_keyguard"
             android:title="@string/block_on_secure_keyguard_title"
-            android:summary="@string/block_on_secure_keyguard_summary"
+            android:summary="@string/block_on_secure_keyguard_summary" />
+
+        <com.android.settings.candy.widget.SeekBarPreferenceCham
+            android:key="qs_transparent_shade"
+            android:title="@string/qs_transparent_shade"
+            android:max="255"
+            settings:minimum="0"
+            settings:unitsLeft=""
+            settings:unitsRight=""
             android:persistent="false" />
 
     </PreferenceCategory>
