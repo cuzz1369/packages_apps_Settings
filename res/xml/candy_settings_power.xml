@@ -15,6 +15,15 @@
     android:title="@string/power_menu_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <com.android.settings.candy.widget.SeekBarPreferenceCham
+        android:key="transparent_power_menu"
+        android:title="@string/power_menu_transparency"
+        android:max="100"
+        settings:minimum="0"
+        settings:unitsLeft=""
+        settings:unitsRight=""
+        android:persistent="false" />
+
     <SwitchPreference
         android:key="reboot"
         android:title="@string/power_menu_reboot_title"

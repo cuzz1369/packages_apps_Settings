@@ -31,6 +31,7 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import com.android.settings.candy.widget.SeekBarPreferenceCham;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -47,6 +48,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
     final static String TAG = "PowerMenuActions";
 
+    private static final String PREF_TRANSPARENT_POWER_MENU = "transparent_power_menu";
     private static final String POWER_MENU_ONTHEGO_ENABLED = "power_menu_onthego_enabled";
     private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
 
@@ -62,11 +64,14 @@ public class PowerMenuActions extends SettingsPreferenceFragment
     private SwitchPreference mSilentPref;
     private SwitchPreference mOnTheGoPowerMenu;
     private SlimSeekBarPreference mOnTheGoAlphaPref;
+    private SeekBarPreferenceCham mPowerMenuAlpha;
 
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
     private String[] mAvailableActions;
     private String[] mAllActions;
+
+    private ContentResolver mResolver;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,6 +79,16 @@ public class PowerMenuActions extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.candy_settings_power);
         mContext = getActivity().getApplicationContext();
+
+        mResolver = getActivity().getContentResolver();
+
+        // Power menu alpha
+        mPowerMenuAlpha =
+                (SeekBarPreferenceCham) findPreference(PREF_TRANSPARENT_POWER_MENU);
+        int powerMenuAlpha = Settings.System.getInt(mResolver,
+                Settings.System.TRANSPARENT_POWER_MENU, 100);
+        mPowerMenuAlpha.setValue(powerMenuAlpha / 1);
+        mPowerMenuAlpha.setOnPreferenceChangeListener(this);
 
         mAvailableActions = getActivity().getResources().getStringArray(
                 R.array.power_menu_actions_array);
@@ -190,6 +205,11 @@ public class PowerMenuActions extends SettingsPreferenceFragment
             float val = Float.parseFloat((String) newValue);
             Settings.System.putFloat(getContentResolver(), Settings.System.ON_THE_GO_ALPHA,
                     val / 100);
+            return true;
+        } else if (preference == mPowerMenuAlpha) {
+            int alpha = (Integer) newValue;
+            Settings.System.putInt(mResolver,
+                    Settings.System.TRANSPARENT_POWER_MENU, alpha * 1);
             return true;
         }
         return false;
